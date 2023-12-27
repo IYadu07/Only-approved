@@ -1,0 +1,1 @@
+/var/www/html/OnlyApproved/vendor/magento/module-backend/view/adminhtml/web/js/dashboard/totals.js
