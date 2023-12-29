@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="header.panel.wrapper" remove="true" />
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/onlyApprovedLogo.png</argument>
+                <argument name="logo_height" xsi:type="string">63</argument>
+                <argument name="logo_width" xsi:type="string">325</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceContainer name="header.container">
+            <container name="logo2" htmlTag="div" htmlClass="logo2" after="logo" before="minicart-wrapper">
+                <block class="Magento\Framework\View\Element\Template" name="trustPilotLogo" template="Magento_Theme::trustPilotLogo.phtml"/>
+            </container>
+        </referenceContainer>
+    </body>
+</page>
+
