@@ -47,7 +47,6 @@
         "php-cs-fixer/phpunit-constraint-isidenticalstring": "^1.4",
         "php-cs-fixer/phpunit-constraint-xmlmatchesxsd": "^1.4",
         "phpunit/phpunit": "^9.6",
-        "symfony/phpunit-bridge": "^6.3.8 || ^7.0",
         "symfony/yaml": "^5.4 || ^6.0 || ^7.0"
     },
     "suggest": {
@@ -109,6 +108,7 @@
             "./dev-tools/check_file_permissions.sh",
             "./dev-tools/check_trailing_spaces.sh",
             "@normalize",
+            "@unused-deps",
             "@require-checker",
             "@auto-review"
         ],
@@ -137,7 +137,8 @@
         "test:unit": [
             "Composer\\Config::disableProcessTimeout",
             "paraunit run --testsuite unit"
-        ]
+        ],
+        "unused-deps": "@php dev-tools/vendor/bin/composer-unused --excludePackage=composer/xdebug-handler"
     },
     "scripts-descriptions": {
         "auto-review": "Execute Auto-review",
@@ -162,6 +163,7 @@
         "test:coverage": "Run tests that provide code coverage",
         "test:integration": "Run Integration tests",
         "test:smoke": "Run Smoke tests",
-        "test:unit": "Run Unit tests"
+        "test:unit": "Run Unit tests",
+        "unused-deps": "Verifies if app has dependencies that are not used"
     }
 }
