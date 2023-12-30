@@ -1,1 +1,9 @@
-/var/www/html/OnlyApproved/app/design/frontend/Magento/onlyApproved/web/css/onlyApproved.css
+.page-header .header.content {
+  max-width: 1380px;
+  background-color: red;
+}
+.page-header .header.content::before,
+.page-header .header.content::after
+{
+  background-color: blue;
+}

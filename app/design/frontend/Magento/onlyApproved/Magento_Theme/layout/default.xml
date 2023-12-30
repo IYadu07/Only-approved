@@ -9,11 +9,20 @@
                 <argument name="logo_width" xsi:type="string">325</argument>
             </arguments>
         </referenceBlock>
-        <referenceContainer name="header.container">
-            <container name="logo2" htmlTag="div" htmlClass="logo2" after="logo" before="minicart-wrapper">
+
+        <referenceBlock name="minicart" remove="true" />
+        <referenceBlock name="advanced-search-link" remove="true" />
+
+        <referenceContainer name="header-wrapper">
+            <container name="trustPilotLogo-container" htmlTag="div" htmlClass="trustPilotLogo-container" after="logo" before="minicart-wrapper">
                 <block class="Magento\Framework\View\Element\Template" name="trustPilotLogo" template="Magento_Theme::trustPilotLogo.phtml"/>
+            </container>
+        </referenceContainer>
+
+        <referenceContainer name="header-wrapper">
+            <container name="blue-logo-container" htmlTag="div" htmlClass="blue-logo-container" after="top.search">
+                <block class="Magento\Framework\View\Element\Template" name="blue-logo" template="Magento_Theme::blue-logo.phtml"/>
             </container>
         </referenceContainer>
     </body>
 </page>
-
