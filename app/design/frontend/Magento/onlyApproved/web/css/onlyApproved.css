@@ -1,9 +1,151 @@
 .page-header .header.content {
-  max-width: 1380px;
-  background-color: red;
+  max-width: 1350px;
+  display: flex;
+  padding: 25px 0px;
+  align-items: center;
 }
-.page-header .header.content::before,
-.page-header .header.content::after
-{
-  background-color: blue;
+
+.page-header .header.content .logo {
+  margin: 0px;
+  width: 320px;
+  margin-right: auto;
+}
+
+.page-header .header.content .nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.page-header .header.content .nav-container .trustPilotLogo-container {
+  width: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.page-header .header.content .nav-container .block-search input {
+  border-radius: 35px;
+  padding: 22px;
+}
+
+.page-header .header.content .nav-container .block-search {
+  padding: 0;
+  margin-left: 45px;
+  width: 390px;
+}
+
+.page-header .header.content .nav-container .block-search .control {
+  padding: 0px;
+}
+
+.page-header .header.content .nav-container .block-search .action.search {
+  width: 45px;
+}
+
+.page-header .header.content .nav-container .block-search .action.search:before {
+  font-size: 40px;
+  color: #000;
+  line-height: 32px;
+}
+
+.page-header .header.content .nav-container .action {
+  margin: 7px 5px 0px 0px;
+  height: 32px;
+  padding: 0px;
+}
+
+/* Blue logo */
+
+.page-header .header.content .nav-container .blue-logo-container {
+  width: 45px;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+}
+
+/* Flag container */
+.page-header .header.content .nav-container .flag-and-select-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.page-header .header.content .nav-container .flag-container {
+  width: 15px;
+  height: 15px
+}
+
+.page-header .header.content .nav-container .flag-and-select-container .select-container #country-select {
+  width: 43px;
+  padding: 0px;
+  border: none;
+  font-size: 1.3rem;
+  color: #4a4a4a;
+  box-shadow: none;
+}
+
+.page-header .header.content .nav-container .flag-container img {
+  border-radius: 10px;
+}
+
+/* User */
+
+.page-header .header.content .nav-container .accounts-bag-container {
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-header .header.content .nav-container .accounts-bag-container .user-container,
+.page-header .header.content .nav-container .accounts-bag-container .bag-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.page-header .header.content .nav-container .accounts-bag-container .bag-container::before {
+  content: '';
+  height: 30px;
+  width: 1px;
+  background-color: #dadada;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.page-header .header.content .nav-container .accounts-bag-container .user-container a,
+.page-header .header.content .nav-container .accounts-bag-container .bag-container a {
+  color: #4a4a4a;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.page-header .header.content .nav-container .accounts-bag-container .user-container img,
+.page-header .header.content .nav-container .accounts-bag-container .bag-container img{
+  width: 27px;
+}
+
+.page-header .header.content .nav-container .accounts-bag-container .bag-container {
+  position: relative;
+}
+
+
+.page-header .header.content .nav-container .accounts-bag-container .bag-container .notification {
+  width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 0%;
+    right: 25%;
+    background-color: red;
+    color: #fff;
+    padding: 3px;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
