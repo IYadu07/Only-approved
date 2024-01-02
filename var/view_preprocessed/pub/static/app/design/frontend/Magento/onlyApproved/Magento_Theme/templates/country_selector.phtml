@@ -1,0 +1,18 @@
+<?php $flagsPath = $this->getViewFileUrl('images/flags'); $countries = [ 'US' => 'United States', 'CA' => 'Canada', 'EN' => 'United Kingdom', ]; ?> <div class="flag-and-select-container"><!-- Display Flag --><div class="flag-container"><?php foreach ($countries as $countryCode => $countryName): ?> <img id="<?= $countryCode ?>-flag" class="flag" src="<?= $flagsPath . '/' . $countryCode . '.svg' ?>" alt="<?= $countryName ?> Flag" style="display: none;"><?php endforeach; ?></div><!-- Display Select Element --><div class="select-container"><select id="country-select" name="country"><?php foreach ($countries as $countryCode => $countryName): ?> <option value="<?= $countryCode ?>" data-flag="<?= $countryCode ?>" <?= $countryCode == 'uk' ? 'selected' : '' ?>><?= $countryCode ?></option><?php endforeach; ?></select></div></div><script src="https://code.jquery.com/jquery-3.6.4.min.js"></script><script>
+    $(document).ready(function () {
+        
+        updateFlag($('#country-select').val());
+
+        
+        $('#country-select').change(function () {
+            updateFlag($(this).val());
+        });
+
+        function updateFlag(countryCode) {
+            
+            $('.flag').hide();
+
+            
+            $('#' + countryCode + '-flag').show();
+        }
+    });</script>

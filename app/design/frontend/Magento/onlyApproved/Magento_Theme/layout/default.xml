@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <!-- Removed elements -->
+
+        <referenceBlock name="minicart" remove="true" />
+        <referenceBlock name="advanced-search-link" remove="true" />
+
         <referenceBlock name="header.panel.wrapper" remove="true" />
         <referenceBlock name="logo">
             <arguments>
@@ -10,18 +15,26 @@
             </arguments>
         </referenceBlock>
 
-        <referenceBlock name="minicart" remove="true" />
-        <referenceBlock name="advanced-search-link" remove="true" />
+        <move element="top.search" destination="trustPilotLogo-container" after="-"/>
+        <move element="block-search" destination="trustPilotLogo-container" after="top.search"/>
 
         <referenceContainer name="header-wrapper">
-            <container name="trustPilotLogo-container" htmlTag="div" htmlClass="trustPilotLogo-container" after="logo" before="minicart-wrapper">
-                <block class="Magento\Framework\View\Element\Template" name="trustPilotLogo" template="Magento_Theme::trustPilotLogo.phtml"/>
-            </container>
-        </referenceContainer>
-
-        <referenceContainer name="header-wrapper">
-            <container name="blue-logo-container" htmlTag="div" htmlClass="blue-logo-container" after="top.search">
-                <block class="Magento\Framework\View\Element\Template" name="blue-logo" template="Magento_Theme::blue-logo.phtml"/>
+            <container name="nav-container" htmlTag="div" htmlClass="nav-container" after="logo">
+                <container name="trustPilotLogo-container" htmlTag="div" htmlClass="trustPilotLogo-container">
+                    <block class="Magento\Framework\View\Element\Template" name="trustPilotLogo" template="Magento_Theme::trustPilotLogo.phtml"/>
+                </container>
+                <container name="blue-logo-container" htmlTag="div" htmlClass="blue-logo-container" after="top.search">
+                    <block class="Magento\Framework\View\Element\Template" name="blue-logo" template="Magento_Theme::blue-logo.phtml"/>
+                </container>
+                <block class="Magento\Framework\View\Element\Template" name="country-selector" template="Magento_Theme::country_selector.phtml"/>
+                <container name="accounts-bag-container" htmlTag="div" htmlClass="accounts-bag-container" after="country-selector">
+                    <container name="user-container" htmlTag="div" htmlClass="user-container">
+                        <block class="Magento\Framework\View\Element\Template" name="user-account" template="Magento_Theme::user-account.phtml"/>
+                    </container>
+                    <container name="bag-container" htmlTag="div" htmlClass="bag-container">
+                        <block class="Magento\Framework\View\Element\Template" name="bag-account" template="Magento_Theme::user-bag.phtml"/>
+                    </container>
+                </container>
             </container>
         </referenceContainer>
     </body>
