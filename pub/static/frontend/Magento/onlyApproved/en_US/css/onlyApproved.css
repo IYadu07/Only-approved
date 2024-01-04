@@ -1,7 +1,7 @@
 .page-header .header.content {
   max-width: 1350px;
   display: flex;
-  padding: 25px 0px;
+  padding: 24px 0px;
   align-items: center;
 }
 
@@ -9,11 +9,13 @@
   margin: 0px;
   width: 320px;
   margin-right: auto;
+  min-width: 300px;
 }
 
 .page-header .header.content .nav-container {
   display: flex;
   align-items: center;
+  min-width: 0;
 }
 
 .page-header .header.content .nav-container .trustPilotLogo-container {
@@ -79,7 +81,7 @@
   width: 43px;
   padding: 0px;
   border: none;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #4a4a4a;
   box-shadow: none;
 }
@@ -90,62 +92,122 @@
 
 /* User */
 
-.page-header .header.content .nav-container .accounts-bag-container {
-  float: right;
+.page-header .header.content .nav-container .user-wrapper {
+  padding: 0px 0px 0px 30px;
+}
+
+.page-header .header.content .nav-container .user-wrapper .user-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.page-header .header.content .nav-container .accounts-bag-container .user-container,
-.page-header .header.content .nav-container .accounts-bag-container .bag-container {
+.page-header .header.content .nav-container .user-wrapper .user-item {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px 20px;
 }
 
-.page-header .header.content .nav-container .accounts-bag-container .bag-container::before {
-  content: '';
-  height: 30px;
-  width: 1px;
-  background-color: #dadada;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-}
-
-.page-header .header.content .nav-container .accounts-bag-container .user-container a,
-.page-header .header.content .nav-container .accounts-bag-container .bag-container a {
-  color: #4a4a4a;
-  text-decoration: none;
-  font-size: 1.3rem;
-}
-
-.page-header .header.content .nav-container .accounts-bag-container .user-container img,
-.page-header .header.content .nav-container .accounts-bag-container .bag-container img{
-  width: 27px;
-}
-
-.page-header .header.content .nav-container .accounts-bag-container .bag-container {
+.page-header .header.content .nav-container .user-wrapper .user-item .container {
+  text-align: center;
   position: relative;
 }
 
-
-.page-header .header.content .nav-container .accounts-bag-container .bag-container .notification {
-  width: 12px;
-    height: 12px;
-    position: absolute;
-    top: 0%;
-    right: 25%;
-    background-color: red;
-    color: #fff;
-    padding: 3px;
-    border-radius: 10px;
-    font-size: 1.25rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.page-header .header.content .nav-container .user-wrapper .user-item::before {
+  content: '';
+  display: inline-block;
+  height: 50px;
+  width: 1px;
+  background-color: #dadada;
+  margin: auto 20px;
 }
+
+.page-header .header.content .nav-container .user-wrapper .user-item img {
+  width: 25px;
+  height: auto;
+  display: block;
+  margin: 0px auto;
+}
+
+.page-header .header.content .nav-container .user-wrapper .user-item a {
+  text-decoration: none;
+  display: inline-block;
+  color: #4a4a4a;
+  font-size: 1.4rem;
+  margin-top: 5px;
+}
+
+.page-header .header.content .nav-container .user-wrapper .user-item:first-child:before {
+  content: '';
+  display: none;
+}
+
+.page-header .header.content .nav-container .user-wrapper .user-item .notification {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  background-color: red;
+  color: #fff;
+  padding: 2px;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width:768px) {
+  .page-header .header.content .nav-container .trustPilotLogo-container {
+    display: none;
+  }
+
+  .page-header .header.content .nav-container .blue-logo-container {
+    display: none;
+  }
+}
+
+.navigation .level0 > .level-top{
+  font-weight: 500;
+  font-size: 1.4rem;
+  padding: 0;
+}
+.navigation .level0.parent > .level-top > .ui-menu-icon:after {
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.nav-sections {
+  margin-bottom: 0;
+}
+
+.navigation .level0 {
+  margin: 0;
+}
+
+.nav-sections-item-content>.navigation {
+  max-width: 1350px;
+  min-width: 0;
+}
+
+.nav-sections-item-content>.navigation ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.navigation .level0.parent > .level-top {
+  padding-right: 21px;
+}
+
+.navigation .level0 > .level-top:hover {
+  color: red;
+}
+
+.navigation .level0 .submenu {
+  font-weight: 500;
+  border: 0;
+  width: 100%;
+} 
