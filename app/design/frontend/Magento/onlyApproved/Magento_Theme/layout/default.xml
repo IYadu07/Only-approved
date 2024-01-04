@@ -3,10 +3,10 @@
     <body>
         <!-- Removed elements -->
 
+        <referenceBlock name="header.panel.wrapper" remove="true" />
         <referenceBlock name="minicart" remove="true" />
         <referenceBlock name="advanced-search-link" remove="true" />
 
-        <referenceBlock name="header.panel.wrapper" remove="true" />
         <referenceBlock name="logo">
             <arguments>
                 <argument name="logo_file" xsi:type="string">images/onlyApprovedLogo.png</argument>
@@ -14,9 +14,103 @@
                 <argument name="logo_width" xsi:type="string">325</argument>
             </arguments>
         </referenceBlock>
+        <referenceContainer name="header-wrapper">
 
-        <move element="top.search" destination="trustPilotLogo-container" after="-"/>
-        <move element="block-search" destination="trustPilotLogo-container" after="top.search"/>
+            <container name="nav-container" htmlTag="div" htmlClass="nav-container" after="logo">
+
+                <container name="trustPilotLogo-container" htmlTag="div" htmlClass="trustPilotLogo-container">
+                    <block class="Magento\Framework\View\Element\Template" name="trustPilotLogo" template="Magento_Theme::trustPilotLogo.phtml"/>
+                </container>
+
+                <container name="blue-logo-container" htmlTag="div" htmlClass="blue-logo-container" after="top.search">
+                    <block class="Magento\Framework\View\Element\Template" name="blue-logo" template="Magento_Theme::blue-logo.phtml"/>
+                </container>
+
+                <block class="Magento\Framework\View\Element\Template" name="country-selector" template="Magento_Theme::country_selector.phtml"/>
+                
+                <container name="user-wrapper" htmlTag="div" htmlClass="user-wrapper" after="country-selector">
+                    
+                    <block class="Magento\Framework\View\Element\Template" name="user" template="Magento_Theme::user.phtml"/>
+                    
+                </container>
+
+                <!-- <container name="accounts-bag-container" htmlTag="div" htmlClass="accounts-bag-container" after="country-selector">
+                    
+                    <container name="user-container" htmlTag="div" htmlClass="user-container">
+                        <block class="Magento\Framework\View\Element\Template" name="user-account" template="Magento_Theme::user-account.phtml"/>
+                    </container>
+
+                    <container name="bag-container" htmlTag="div" htmlClass="bag-container">
+                        <block class="Magento\Framework\View\Element\Template" name="bag-account" template="Magento_Theme::user-bag.phtml"/>
+                    </container>
+                    
+                </container> -->
+
+            </container>
+
+        </referenceContainer>
+
+        <move element="top.search" destination="nav-container" after="trustPilotLogo-container"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <referenceBlock name="header.container" remove="true" />
+        <referenceBlock name="page.top" remove="true" />
+        <referenceBlock name="main.content" remove="true" />
+        <referenceBlock name="footer-container" remove="true" />
+
+        <referenceContainer name="navbar">
+
+            <container name="split-container-one" htmlTag="div" htmlClass="split-container-one">
+                <container name="main-logo-container" htmlTag="div" htmlClass="main-logo-container">
+                    <block class="Magento\Framework\View\Element\Template" name="main-logo" template="Magento_Theme::main-logo.phtml"/>
+                </container>
+                <container name="nav-container" htmlTag="div" htmlClass="nav-container" after="main-logo-container">
+                    <container name="trustPilotLogo-container" htmlTag="div" htmlClass="trustPilotLogo-container">
+                        <block class="Magento\Framework\View\Element\Template" name="trustPilotLogo" template="Magento_Theme::trustPilotLogo.phtml"/>
+                    </container>
+                    <container name="searchbar-container" htmlTag="div" htmlClass="searchbar-container">
+                        <block class="Magento\Framework\View\Element\Template" name="searchbar" template="Magento_Theme::searchbar.phtml"/>
+                    </container>
+                    <container name="blue-logo-container" htmlTag="div" htmlClass="blue-logo-container" after="">
+                        <block class="Magento\Framework\View\Element\Template" name="blue-logo" template="Magento_Theme::blue-logo.phtml"/>
+                    </container>
+                    <block class="Magento\Framework\View\Element\Template" name="country-selector" template="Magento_Theme::country_selector.phtml"/>
+                    <container name="accounts-bag-container" htmlTag="div" htmlClass="accounts-bag-container" after="country-selector">
+                        <container name="user-container" htmlTag="div" htmlClass="user-container">
+                            <block class="Magento\Framework\View\Element\Template" name="user-account" template="Magento_Theme::user-account.phtml"/>
+                        </container>
+                        <container name="bag-container" htmlTag="div" htmlClass="bag-container">
+                            <block class="Magento\Framework\View\Element\Template" name="bag-account" template="Magento_Theme::user-bag.phtml"/>
+                        </container>
+                    </container>
+                </container>
+            </container>
+        </referenceContainer> -->
+
+        <!-- <referenceBlock name="minicart" remove="true" />
+        <referenceBlock name="advanced-search-link" remove="true" />
+        <referenceBlock name="header.panel.wrapper" remove="true" />
+        <referenceBlock name="page.top" remove="true" /> -->
+
+        <!-- <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/onlyApprovedLogo.png</argument>
+                <argument name="logo_height" xsi:type="string">63</argument>
+                <argument name="logo_width" xsi:type="string">325</argument>
+            </arguments>
+        </referenceBlock>
 
         <referenceContainer name="header-wrapper">
             <container name="nav-container" htmlTag="div" htmlClass="nav-container" after="logo">
@@ -37,5 +131,13 @@
                 </container>
             </container>
         </referenceContainer>
+
+        <container name="split-container-one" htmlTag="div" htmlClass="split-container-one" after="header.container">
+            <container name="newtrustPilotLogo-container" htmlTag="div" htmlClass="trustPilotLogo-container">
+                <block class="Magento\Framework\View\Element\Template" name="newtrustPilotLogo" template="Magento_Theme::trustPilotLogo.phtml"/>
+            </container>
+        </container>
+
+        <move element="top.search" destination="nav-container" after="trustPilotLogo-container"/> -->
     </body>
 </page>
