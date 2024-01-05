@@ -6,6 +6,10 @@
         <referenceBlock name="header.panel.wrapper" remove="true" />
         <referenceBlock name="minicart" remove="true" />
         <referenceBlock name="advanced-search-link" remove="true" />
+        <!-- <referenceBlock name="copyright" remove="true" />
+        <referenceBlock name="report.bugs" remove="true" />
+        <referenceBlock name="footer_links" remove="true" /> -->
+        <referenceBlock name="footer" remove="true" />
 
         <referenceBlock name="logo">
             <arguments>
@@ -27,30 +31,36 @@
                 </container>
 
                 <block class="Magento\Framework\View\Element\Template" name="country-selector" template="Magento_Theme::country_selector.phtml"/>
-                
+
                 <container name="user-wrapper" htmlTag="div" htmlClass="user-wrapper" after="country-selector">
-                    
+
                     <block class="Magento\Framework\View\Element\Template" name="user" template="Magento_Theme::user.phtml"/>
-                    
+
                 </container>
-
-                <!-- <container name="accounts-bag-container" htmlTag="div" htmlClass="accounts-bag-container" after="country-selector">
-                    
-                    <container name="user-container" htmlTag="div" htmlClass="user-container">
-                        <block class="Magento\Framework\View\Element\Template" name="user-account" template="Magento_Theme::user-account.phtml"/>
-                    </container>
-
-                    <container name="bag-container" htmlTag="div" htmlClass="bag-container">
-                        <block class="Magento\Framework\View\Element\Template" name="bag-account" template="Magento_Theme::user-bag.phtml"/>
-                    </container>
-                    
-                </container> -->
 
             </container>
 
         </referenceContainer>
 
         <move element="top.search" destination="nav-container" after="trustPilotLogo-container"/>
+
+        <!-- footer -->
+
+        <referenceContainer name="footer-container">
+
+            <container name="footer-sub-container" htmlTag="div" htmlClass="footer-sub-container">
+                <container name="width-container-one" htmlTag="div" htmlClass="width-container">
+                    <block class="Magento\Framework\View\Element\Template" name="footer-sub" template="Magento_Theme::footer-sub.phtml"/>
+                </container>
+            </container>
+
+            <container name="footer-nav-container" htmlTag="div" htmlClass="footer-nav-container">
+                <block class="Magento\Framework\View\Element\Template" name="footer-nav" template="Magento_Theme::footer-nav.phtml"/>
+            </container>
+
+        </referenceContainer>
+
+        <move element="form.subscribe" destination="width-container-one"/>
 
 
 
