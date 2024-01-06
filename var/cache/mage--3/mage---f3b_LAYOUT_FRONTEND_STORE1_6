@@ -1,4 +1,4 @@
-a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1704460981;s:6:"expire";i:1735996981;s:4:"tags";s:37:"f3b_LAYOUT_GENERAL_CACHE_TAG,f3b_MAGE";}
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1704547988;s:6:"expire";i:1736083988;s:4:"tags";s:37:"f3b_LAYOUT_GENERAL_CACHE_TAG,f3b_MAGE";}
 <?xml version="1.0"?>
 <layouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><handle id="catalog_category_view"><body/>
 </handle><handle id="catalogsearch_advanced_index"><body/>
@@ -7132,7 +7132,10 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1704460981;s:6:"expire";i:1735996981;s:4:"t
    <referenceBlock name="header.panel.wrapper" remove="true"/>
    <referenceBlock name="minicart" remove="true"/>
    <referenceBlock name="advanced-search-link" remove="true"/>
+   <referenceBlock name="columns.top" remove="true"/>
+   <referenceBlock name="CmsHomePageContent" remove="true"/>
    <referenceBlock name="footer" remove="true"/>
+   <referenceBlock name="page.top" remove="true"/>
    <referenceBlock name="logo">
       <arguments>
          <argument name="logo_file" xsi:type="string">images/onlyApprovedLogo.png</argument>
