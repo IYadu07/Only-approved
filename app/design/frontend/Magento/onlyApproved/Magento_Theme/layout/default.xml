@@ -1,15 +1,17 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+
         <!-- Removed elements -->
 
         <referenceBlock name="header.panel.wrapper" remove="true" />
         <referenceBlock name="minicart" remove="true" />
         <referenceBlock name="advanced-search-link" remove="true" />
-        <!-- <referenceBlock name="copyright" remove="true" />
-        <referenceBlock name="report.bugs" remove="true" />
-        <referenceBlock name="footer_links" remove="true" /> -->
+        <referenceBlock name="columns.top" remove="true" />
+        <referenceBlock name="CmsHomePageContent" remove="true" />
         <referenceBlock name="footer" remove="true" />
+
+        <!-- Logo -->
 
         <referenceBlock name="logo">
             <arguments>
@@ -18,6 +20,9 @@
                 <argument name="logo_width" xsi:type="string">325</argument>
             </arguments>
         </referenceBlock>
+
+        <!-- Header -->
+
         <referenceContainer name="header-wrapper">
 
             <container name="nav-container" htmlTag="div" htmlClass="nav-container" after="logo">
@@ -44,6 +49,10 @@
 
         <move element="top.search" destination="nav-container" after="trustPilotLogo-container"/>
 
+        <referenceBlock name="page.top">
+            <block class="Magento\Framework\View\Element\Template" name="header-carousel" template="Magento_Theme::header-carousel.phtml"/>
+        </referenceBlock>
+
         <!-- footer -->
 
         <referenceContainer name="footer-container">
@@ -61,93 +70,5 @@
         </referenceContainer>
 
         <move element="form.subscribe" destination="width-container-one"/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- <referenceBlock name="header.container" remove="true" />
-        <referenceBlock name="page.top" remove="true" />
-        <referenceBlock name="main.content" remove="true" />
-        <referenceBlock name="footer-container" remove="true" />
-
-        <referenceContainer name="navbar">
-
-            <container name="split-container-one" htmlTag="div" htmlClass="split-container-one">
-                <container name="main-logo-container" htmlTag="div" htmlClass="main-logo-container">
-                    <block class="Magento\Framework\View\Element\Template" name="main-logo" template="Magento_Theme::main-logo.phtml"/>
-                </container>
-                <container name="nav-container" htmlTag="div" htmlClass="nav-container" after="main-logo-container">
-                    <container name="trustPilotLogo-container" htmlTag="div" htmlClass="trustPilotLogo-container">
-                        <block class="Magento\Framework\View\Element\Template" name="trustPilotLogo" template="Magento_Theme::trustPilotLogo.phtml"/>
-                    </container>
-                    <container name="searchbar-container" htmlTag="div" htmlClass="searchbar-container">
-                        <block class="Magento\Framework\View\Element\Template" name="searchbar" template="Magento_Theme::searchbar.phtml"/>
-                    </container>
-                    <container name="blue-logo-container" htmlTag="div" htmlClass="blue-logo-container" after="">
-                        <block class="Magento\Framework\View\Element\Template" name="blue-logo" template="Magento_Theme::blue-logo.phtml"/>
-                    </container>
-                    <block class="Magento\Framework\View\Element\Template" name="country-selector" template="Magento_Theme::country_selector.phtml"/>
-                    <container name="accounts-bag-container" htmlTag="div" htmlClass="accounts-bag-container" after="country-selector">
-                        <container name="user-container" htmlTag="div" htmlClass="user-container">
-                            <block class="Magento\Framework\View\Element\Template" name="user-account" template="Magento_Theme::user-account.phtml"/>
-                        </container>
-                        <container name="bag-container" htmlTag="div" htmlClass="bag-container">
-                            <block class="Magento\Framework\View\Element\Template" name="bag-account" template="Magento_Theme::user-bag.phtml"/>
-                        </container>
-                    </container>
-                </container>
-            </container>
-        </referenceContainer> -->
-
-        <!-- <referenceBlock name="minicart" remove="true" />
-        <referenceBlock name="advanced-search-link" remove="true" />
-        <referenceBlock name="header.panel.wrapper" remove="true" />
-        <referenceBlock name="page.top" remove="true" /> -->
-
-        <!-- <referenceBlock name="logo">
-            <arguments>
-                <argument name="logo_file" xsi:type="string">images/onlyApprovedLogo.png</argument>
-                <argument name="logo_height" xsi:type="string">63</argument>
-                <argument name="logo_width" xsi:type="string">325</argument>
-            </arguments>
-        </referenceBlock>
-
-        <referenceContainer name="header-wrapper">
-            <container name="nav-container" htmlTag="div" htmlClass="nav-container" after="logo">
-                <container name="trustPilotLogo-container" htmlTag="div" htmlClass="trustPilotLogo-container">
-                    <block class="Magento\Framework\View\Element\Template" name="trustPilotLogo" template="Magento_Theme::trustPilotLogo.phtml"/>
-                </container>
-                <container name="blue-logo-container" htmlTag="div" htmlClass="blue-logo-container" after="top.search">
-                    <block class="Magento\Framework\View\Element\Template" name="blue-logo" template="Magento_Theme::blue-logo.phtml"/>
-                </container>
-                <block class="Magento\Framework\View\Element\Template" name="country-selector" template="Magento_Theme::country_selector.phtml"/>
-                <container name="accounts-bag-container" htmlTag="div" htmlClass="accounts-bag-container" after="country-selector">
-                    <container name="user-container" htmlTag="div" htmlClass="user-container">
-                        <block class="Magento\Framework\View\Element\Template" name="user-account" template="Magento_Theme::user-account.phtml"/>
-                    </container>
-                    <container name="bag-container" htmlTag="div" htmlClass="bag-container">
-                        <block class="Magento\Framework\View\Element\Template" name="bag-account" template="Magento_Theme::user-bag.phtml"/>
-                    </container>
-                </container>
-            </container>
-        </referenceContainer>
-
-        <container name="split-container-one" htmlTag="div" htmlClass="split-container-one" after="header.container">
-            <container name="newtrustPilotLogo-container" htmlTag="div" htmlClass="trustPilotLogo-container">
-                <block class="Magento\Framework\View\Element\Template" name="newtrustPilotLogo" template="Magento_Theme::trustPilotLogo.phtml"/>
-            </container>
-        </container>
-
-        <move element="top.search" destination="nav-container" after="trustPilotLogo-container"/> -->
     </body>
 </page>

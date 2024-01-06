@@ -1,3 +1,11 @@
+body {
+  background-color: #f8f8f8;
+}
+
+.page-header {
+  background-color: #fff;
+}
+
 .page-header .header.content {
   max-width: 1350px;
   display: flex;
@@ -179,10 +187,6 @@
   font-size: 25px;
 }
 
-.nav-sections {
-  margin-bottom: 0;
-}
-
 .navigation .level0 {
   margin: 0;
 }
@@ -213,17 +217,15 @@
   width: 100%;
 }
 
-
-
-
-
-
-
-
-
+/* page content */
 
 .page-main {
-  background-color: #f8f8f8;
+  background-color: transparent;
+  max-width: 1350px;
+}
+
+.page-main .columns .main > p {
+  display: none;
 }
 
 
@@ -320,6 +322,7 @@
   height: 43px;
   width: 350px;
   padding: 0 0 0 20px;
+  box-shadow: none;
 }
 
 input[type="email"] {
@@ -433,14 +436,14 @@ input[type="email"] {
   flex-direction: row;
 }
 
-.footer-nav-container .footer-col-img {
+.footer-nav-container .footer-col-svg {
   display: flex;
   align-items: center;
   margin-right: 20px;
 }
 
 
-.footer-nav-container .footer-col-img img {
+.footer-nav-container .footer-col-svg svg {
   width: 45px;
   height: 45px;
 }
