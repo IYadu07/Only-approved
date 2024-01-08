@@ -1,4 +1,4 @@
-a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1704547988;s:6:"expire";i:1736083988;s:4:"tags";s:37:"f3b_LAYOUT_GENERAL_CACHE_TAG,f3b_MAGE";}
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1704720960;s:6:"expire";i:1736256960;s:4:"tags";s:37:"f3b_LAYOUT_GENERAL_CACHE_TAG,f3b_MAGE";}
 <?xml version="1.0"?>
 <layouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><handle id="catalog_category_view"><body/>
 </handle><handle id="catalogsearch_advanced_index"><body/>
@@ -7135,7 +7135,7 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1704547988;s:6:"expire";i:1736083988;s:4:"t
    <referenceBlock name="columns.top" remove="true"/>
    <referenceBlock name="CmsHomePageContent" remove="true"/>
    <referenceBlock name="footer" remove="true"/>
-   <referenceBlock name="page.top" remove="true"/>
+   <referenceBlock name="navigationMenu" remove="true"/>
    <referenceBlock name="logo">
       <arguments>
          <argument name="logo_file" xsi:type="string">images/onlyApprovedLogo.png</argument>
@@ -7158,6 +7158,9 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1704547988;s:6:"expire";i:1736083988;s:4:"t
       </container>
    </referenceContainer>
    <move element="top.search" destination="nav-container" after="trustPilotLogo-container"/>
+   <referenceBlock name="page.top">
+      <block class="Magento\Framework\View\Element\Template" name="header-carousel" template="Magento_Theme::header-carousel.phtml"/>
+   </referenceBlock>
    <referenceContainer name="footer-container">
       <container name="footer-sub-container" htmlTag="div" htmlClass="footer-sub-container">
          <container name="width-container-one" htmlTag="div" htmlClass="width-container">
@@ -7169,6 +7172,9 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1704547988;s:6:"expire";i:1736083988;s:4:"t
       </container>
    </referenceContainer>
    <move element="form.subscribe" destination="width-container-one"/>
+   <referenceContainer name="before.body.end">
+      <block class="Magento\Framework\View\Element\Template" name="custom.script" template="Magento_Theme::custom-script.phtml"/>
+   </referenceContainer>
 </body>
 </handle><handle id="default_head_blocks"><head>
    <css src="css/onlyApproved.css" media="all and (min-width: 0)"/>
