@@ -1,14 +1,1 @@
-<!--
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
--->
-<each args="{ data: actionsList, as: 'action' }">
-    <li>
-        <a class="action-menu-item" href="" if="$parent.isVisible($row(), action.name)"
-           text="action.title" click="$parent[action.handler].bind($parent, $row())"
-           attr="{'data-ui-id': 'action-' + action.name}">
-        </a>
-    </li>
-</each>
+/var/www/html/OnlyApproved/vendor/magento/module-adobe-stock-image-admin-ui/view/adminhtml/web/template/mediaGallery/grid/columns/image/licenseActions.html
