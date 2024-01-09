@@ -1,0 +1,1 @@
+<!-- File: app/design/frontend/Vendor/CustomTheme/Magento_Theme/templates/debugInfo.phtml --><?php $layout = $block->getLayout(); $output = []; foreach ($layout->getUpdate()->getHandles() as $handle) { $output[] = $handle; } echo implode('<br>', $output);
