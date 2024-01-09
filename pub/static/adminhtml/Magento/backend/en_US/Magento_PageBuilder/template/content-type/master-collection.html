@@ -1,1 +1,10 @@
-/var/www/html/OnlyApproved/vendor/magento/module-page-builder/view/adminhtml/web/template/content-type/master-collection.html
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+
+<div each="contentType.getChildren()" data-wrapper="true">
+    <render args="{ name: content.template, data: content }" ></render>
+</div>

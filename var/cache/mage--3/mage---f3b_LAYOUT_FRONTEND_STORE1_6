@@ -1,4 +1,4 @@
-a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1704720960;s:6:"expire";i:1736256960;s:4:"tags";s:37:"f3b_LAYOUT_GENERAL_CACHE_TAG,f3b_MAGE";}
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1704807246;s:6:"expire";i:1736343246;s:4:"tags";s:37:"f3b_LAYOUT_GENERAL_CACHE_TAG,f3b_MAGE";}
 <?xml version="1.0"?>
 <layouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><handle id="catalog_category_view"><body/>
 </handle><handle id="catalogsearch_advanced_index"><body/>
@@ -7130,10 +7130,8 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1704720960;s:6:"expire";i:1736256960;s:4:"t
 </body>
 </handle><handle id="default"><body>
    <referenceBlock name="header.panel.wrapper" remove="true"/>
-   <referenceBlock name="minicart" remove="true"/>
    <referenceBlock name="advanced-search-link" remove="true"/>
    <referenceBlock name="columns.top" remove="true"/>
-   <referenceBlock name="CmsHomePageContent" remove="true"/>
    <referenceBlock name="footer" remove="true"/>
    <referenceBlock name="navigationMenu" remove="true"/>
    <referenceBlock name="logo">
@@ -7152,12 +7150,20 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1704720960;s:6:"expire";i:1736256960;s:4:"t
             <block class="Magento\Framework\View\Element\Template" name="blue-logo" template="Magento_Theme::blue-logo.phtml"/>
          </container>
          <block class="Magento\Framework\View\Element\Template" name="country-selector" template="Magento_Theme::country_selector.phtml"/>
-         <container name="user-wrapper" htmlTag="div" htmlClass="user-wrapper" after="country-selector">
-            <block class="Magento\Framework\View\Element\Template" name="user" template="Magento_Theme::user.phtml"/>
+         <container name="user-container" htmlTag="div" htmlClass="user-container" after="country-selector">
+            <container name="item-my-account-container" htmlTag="div" htmlClass="user-item">
+               <block class="Magento\Framework\View\Element\Template" name="item-my-account" template="Magento_Theme::my-account.phtml"/>
+            </container>
+            <container name="item-minicart-container" htmlTag="div" htmlClass="user-item" after="item-my-account">
+               <container name="item-minicart-container-inner" htmlTag="div" htmlClass="container">
+                  <block class="Magento\Framework\View\Element\Template" name="item-minicart" template="Magento_Theme::minicart.phtml"/>
+               </container>
+            </container>
          </container>
       </container>
    </referenceContainer>
    <move element="top.search" destination="nav-container" after="trustPilotLogo-container"/>
+   <move element="minicart" destination="item-minicart-container-inner" before="-"/>
    <referenceBlock name="page.top">
       <block class="Magento\Framework\View\Element\Template" name="header-carousel" template="Magento_Theme::header-carousel.phtml"/>
    </referenceBlock>
