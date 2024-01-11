@@ -336,14 +336,14 @@ define([
                         width,
                         targetPageX,
                         rightBound;
-
+                
                     if (target.has('ul')) {
                         ulElement = target.find('ul');
                         ulElementWidth = target.find('ul').outerWidth(true);
                         width = target.outerWidth() * 2;
-                        targetPageX = target.offset().left;
+                        targetPageX = 0; // Set targetPageX to 0
                         rightBound = $(window).width();
-
+                
                         if ((ulElementWidth + width + targetPageX) > rightBound) {
                             ulElement.addClass('submenu-reverse');
                         }
@@ -351,7 +351,7 @@ define([
                             ulElement.removeClass('submenu-reverse');
                         }
                     }
-
+                
                     // Remove ui-state-active class from siblings of the newly focused menu item
                     // to avoid a jump caused by adjacent elements both having a class with a border
                     target.siblings().children(".ui-state-active").removeClass("ui-state-active");

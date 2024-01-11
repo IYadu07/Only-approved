@@ -1,0 +1,400 @@
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1704979233;s:6:"expire";i:1705065633;s:4:"tags";s:33:"f3b_CAT_P,f3b_BLOCK_HTML,f3b_MAGE";}
+
+    <div class="block widget block-new-products grid">
+        <div class="block-title">
+            <strong role="heading" aria-level="2">New Products</strong>
+        </div>
+        <div class="block-content">
+            <!-- new_products_content_widget_grid-->            <div class="products-grid grid">
+                <ol class="product-items widget-new-grid">
+                                        <li class="product-item">
+                        <div class="product-item-info">
+                            <a href="http://localhost/OnlyApproved/index.php/hd-muscle-pre-hd-ultra.html"
+                               class="product-item-photo">
+                                <span class="product-image-container product-image-container-5">
+    <span class="product-image-wrapper">
+        <img class="product-image-photo"
+                        src="http://localhost/OnlyApproved/pub/media/catalog/product/cache/202dcbdf01bb93195b1b919d21250728/p/o/popular_product_5.png"
+            loading="lazy"
+            width="240"
+            height="300"
+            alt="HD&#x20;Muscle-Pre-HD&#x20;Ultra"/></span>
+</span>
+<style>.product-image-container-5 {
+    width: 240px;
+}
+.product-image-container-5 span.product-image-wrapper {
+    padding-bottom: 125%;
+}</style><script type="text&#x2F;javascript">prodImageContainers = document.querySelectorAll(".product-image-container-5");
+for (var i = 0; i < prodImageContainers.length; i++) {
+    prodImageContainers[i].style.width = "240px";
+}
+prodImageContainersWrappers = document.querySelectorAll(
+    ".product-image-container-5  span.product-image-wrapper"
+);
+for (var i = 0; i < prodImageContainersWrappers.length; i++) {
+    prodImageContainersWrappers[i].style.paddingBottom = "125%";
+}</script>                            </a>
+                            <div class="product-item-details">
+                                <strong class="product-item-name">
+                                    <a title="HD Muscle-Pre-HD Ultra"
+                                       href="http://localhost/OnlyApproved/index.php/hd-muscle-pre-hd-ultra.html"
+                                       class="product-item-link">
+                                        HD Muscle-Pre-HD Ultra                                    </a>
+                                </strong>
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="5" data-price-box="product-id-5">
+    
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="old-price-5-widget-new-grid"                data-price-amount="44.9"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">$44.90</span></span>
+        </span>
+
+</div>
+                                                                                                    
+                                                                    <div class="product-item-actions">
+                                                                                    <div class="actions-primary">
+                                                                                                                                                                                                                    <button class="action tocart primary"
+                                                                data-post='{"action":"http:\/\/localhost\/OnlyApproved\/index.php\/checkout\/cart\/add\/uenc\/aHR0cDovL2xvY2FsaG9zdC9Pbmx5QXBwcm92ZWQvaW5kZXgucGhwLw~~\/product\/5\/","data":{"product":5,"uenc":"aHR0cDovL2xvY2FsaG9zdC9Pbmx5QXBwcm92ZWQvaW5kZXgucGhwLw~~"}}'
+                                                                type="button"
+                                                                title="Add&#x20;to&#x20;Cart">
+                                                            <span>Add to Cart</span>
+                                                        </button>
+                                                                                                                                                </div>
+                                                                                                                            <div class="actions-secondary" data-role="add-to-links">
+                                                                                                    <a href="#"
+                                                       data-post='{"action":"http:\/\/localhost\/OnlyApproved\/index.php\/wishlist\/index\/add\/","data":{"product":5,"uenc":"aHR0cDovL2xvY2FsaG9zdC9Pbmx5QXBwcm92ZWQvaW5kZXgucGhwLw~~"}}'
+                                                       class="action towishlist"
+                                                       data-action="add-to-wishlist"
+                                                       title="Add&#x20;to&#x20;Wish&#x20;List">
+                                                        <span>Add to Wish List</span>
+                                                    </a>
+                                                                                                                                                                                                        <a href="#" class="action tocompare"
+                                                       data-post='{"action":"http:\/\/localhost\/OnlyApproved\/index.php\/catalog\/product_compare\/add\/","data":{"product":"5","uenc":"aHR0cDovL2xvY2FsaG9zdC9Pbmx5QXBwcm92ZWQvaW5kZXgucGhwLw~~"}}'
+                                                       title="Add&#x20;to&#x20;Compare">
+                                                        <span>Add to Compare</span>
+                                                    </a>
+                                                                                            </div>
+                                                                            </div>
+                                                            </div>
+                        </div>
+                     </li>
+                                        <li class="product-item">
+                        <div class="product-item-info">
+                            <a href="http://localhost/OnlyApproved/index.php/scitec-nutrition-100-whey-protein-professional.html"
+                               class="product-item-photo">
+                                <span class="product-image-container product-image-container-4">
+    <span class="product-image-wrapper">
+        <img class="product-image-photo"
+                        src="http://localhost/OnlyApproved/pub/media/catalog/product/cache/202dcbdf01bb93195b1b919d21250728/p/o/popular_product_4.png"
+            loading="lazy"
+            width="240"
+            height="300"
+            alt="Scitec&#x20;Nutrition&#x20;100&#x25;&#x20;Whey&#x20;Protein&#x20;Professional"/></span>
+</span>
+<style>.product-image-container-4 {
+    width: 240px;
+}
+.product-image-container-4 span.product-image-wrapper {
+    padding-bottom: 125%;
+}</style><script type="text&#x2F;javascript">prodImageContainers = document.querySelectorAll(".product-image-container-4");
+for (var i = 0; i < prodImageContainers.length; i++) {
+    prodImageContainers[i].style.width = "240px";
+}
+prodImageContainersWrappers = document.querySelectorAll(
+    ".product-image-container-4  span.product-image-wrapper"
+);
+for (var i = 0; i < prodImageContainersWrappers.length; i++) {
+    prodImageContainersWrappers[i].style.paddingBottom = "125%";
+}</script>                            </a>
+                            <div class="product-item-details">
+                                <strong class="product-item-name">
+                                    <a title="Scitec Nutrition 100% Whey Protein Professional"
+                                       href="http://localhost/OnlyApproved/index.php/scitec-nutrition-100-whey-protein-professional.html"
+                                       class="product-item-link">
+                                        Scitec Nutrition 100% Whey Protein Professional                                    </a>
+                                </strong>
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="4" data-price-box="product-id-4">
+    
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="old-price-4-widget-new-grid"                data-price-amount="24.9"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">$24.90</span></span>
+        </span>
+
+</div>
+                                                                                                    
+                                                                    <div class="product-item-actions">
+                                                                                    <div class="actions-primary">
+                                                                                                                                                                                                                    <button class="action tocart primary"
+                                                                data-post='{"action":"http:\/\/localhost\/OnlyApproved\/index.php\/checkout\/cart\/add\/uenc\/aHR0cDovL2xvY2FsaG9zdC9Pbmx5QXBwcm92ZWQvaW5kZXgucGhwLw~~\/product\/4\/","data":{"product":4,"uenc":"aHR0cDovL2xvY2FsaG9zdC9Pbmx5QXBwcm92ZWQvaW5kZXgucGhwLw~~"}}'
+                                                                type="button"
+                                                                title="Add&#x20;to&#x20;Cart">
+                                                            <span>Add to Cart</span>
+                                                        </button>
+                                                                                                                                                </div>
+                                                                                                                            <div class="actions-secondary" data-role="add-to-links">
+                                                                                                    <a href="#"
+                                                       data-post='{"action":"http:\/\/localhost\/OnlyApproved\/index.php\/wishlist\/index\/add\/","data":{"product":4,"uenc":"aHR0cDovL2xvY2FsaG9zdC9Pbmx5QXBwcm92ZWQvaW5kZXgucGhwLw~~"}}'
+                                                       class="action towishlist"
+                                                       data-action="add-to-wishlist"
+                                                       title="Add&#x20;to&#x20;Wish&#x20;List">
+                                                        <span>Add to Wish List</span>
+                                                    </a>
+                                                                                                                                                                                                        <a href="#" class="action tocompare"
+                                                       data-post='{"action":"http:\/\/localhost\/OnlyApproved\/index.php\/catalog\/product_compare\/add\/","data":{"product":"4","uenc":"aHR0cDovL2xvY2FsaG9zdC9Pbmx5QXBwcm92ZWQvaW5kZXgucGhwLw~~"}}'
+                                                       title="Add&#x20;to&#x20;Compare">
+                                                        <span>Add to Compare</span>
+                                                    </a>
+                                                                                            </div>
+                                                                            </div>
+                                                            </div>
+                        </div>
+                     </li>
+                                        <li class="product-item">
+                        <div class="product-item-info">
+                            <a href="http://localhost/OnlyApproved/index.php/scitec-nutrition-whey-isolate.html"
+                               class="product-item-photo">
+                                <span class="product-image-container product-image-container-3">
+    <span class="product-image-wrapper">
+        <img class="product-image-photo"
+                        src="http://localhost/OnlyApproved/pub/media/catalog/product/cache/202dcbdf01bb93195b1b919d21250728/p/o/popular_product_3_2.png"
+            loading="lazy"
+            width="240"
+            height="300"
+            alt="Scitec&#x20;Nutrition&#x20;100&#x25;&#x20;Whey&#x20;Isolate"/></span>
+</span>
+<style>.product-image-container-3 {
+    width: 240px;
+}
+.product-image-container-3 span.product-image-wrapper {
+    padding-bottom: 125%;
+}</style><script type="text&#x2F;javascript">prodImageContainers = document.querySelectorAll(".product-image-container-3");
+for (var i = 0; i < prodImageContainers.length; i++) {
+    prodImageContainers[i].style.width = "240px";
+}
+prodImageContainersWrappers = document.querySelectorAll(
+    ".product-image-container-3  span.product-image-wrapper"
+);
+for (var i = 0; i < prodImageContainersWrappers.length; i++) {
+    prodImageContainersWrappers[i].style.paddingBottom = "125%";
+}</script>                            </a>
+                            <div class="product-item-details">
+                                <strong class="product-item-name">
+                                    <a title="Scitec Nutrition 100% Whey Isolate"
+                                       href="http://localhost/OnlyApproved/index.php/scitec-nutrition-whey-isolate.html"
+                                       class="product-item-link">
+                                        Scitec Nutrition 100% Whey Isolate                                    </a>
+                                </strong>
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="3" data-price-box="product-id-3">
+    
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="old-price-3-widget-new-grid"                data-price-amount="24.9"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">$24.90</span></span>
+        </span>
+
+</div>
+                                                                                                    
+                                                                    <div class="product-item-actions">
+                                                                                    <div class="actions-primary">
+                                                                                                                                                                                                                    <button class="action tocart primary"
+                                                                data-post='{"action":"http:\/\/localhost\/OnlyApproved\/index.php\/checkout\/cart\/add\/uenc\/aHR0cDovL2xvY2FsaG9zdC9Pbmx5QXBwcm92ZWQvaW5kZXgucGhwLw~~\/product\/3\/","data":{"product":3,"uenc":"aHR0cDovL2xvY2FsaG9zdC9Pbmx5QXBwcm92ZWQvaW5kZXgucGhwLw~~"}}'
+                                                                type="button"
+                                                                title="Add&#x20;to&#x20;Cart">
+                                                            <span>Add to Cart</span>
+                                                        </button>
+                                                                                                                                                </div>
+                                                                                                                            <div class="actions-secondary" data-role="add-to-links">
+                                                                                                    <a href="#"
+                                                       data-post='{"action":"http:\/\/localhost\/OnlyApproved\/index.php\/wishlist\/index\/add\/","data":{"product":3,"uenc":"aHR0cDovL2xvY2FsaG9zdC9Pbmx5QXBwcm92ZWQvaW5kZXgucGhwLw~~"}}'
+                                                       class="action towishlist"
+                                                       data-action="add-to-wishlist"
+                                                       title="Add&#x20;to&#x20;Wish&#x20;List">
+                                                        <span>Add to Wish List</span>
+                                                    </a>
+                                                                                                                                                                                                        <a href="#" class="action tocompare"
+                                                       data-post='{"action":"http:\/\/localhost\/OnlyApproved\/index.php\/catalog\/product_compare\/add\/","data":{"product":"3","uenc":"aHR0cDovL2xvY2FsaG9zdC9Pbmx5QXBwcm92ZWQvaW5kZXgucGhwLw~~"}}'
+                                                       title="Add&#x20;to&#x20;Compare">
+                                                        <span>Add to Compare</span>
+                                                    </a>
+                                                                                            </div>
+                                                                            </div>
+                                                            </div>
+                        </div>
+                     </li>
+                                        <li class="product-item">
+                        <div class="product-item-info">
+                            <a href="http://localhost/OnlyApproved/index.php/viterna-premium-whey-isolate.html"
+                               class="product-item-photo">
+                                <span class="product-image-container product-image-container-2">
+    <span class="product-image-wrapper">
+        <img class="product-image-photo"
+                        src="http://localhost/OnlyApproved/pub/media/catalog/product/cache/202dcbdf01bb93195b1b919d21250728/p/o/popular_product_1.png"
+            loading="lazy"
+            width="240"
+            height="300"
+            alt="Viterna&#x20;Premium&#x20;Whey&#x20;Isolate"/></span>
+</span>
+<style>.product-image-container-2 {
+    width: 240px;
+}
+.product-image-container-2 span.product-image-wrapper {
+    padding-bottom: 125%;
+}</style><script type="text&#x2F;javascript">prodImageContainers = document.querySelectorAll(".product-image-container-2");
+for (var i = 0; i < prodImageContainers.length; i++) {
+    prodImageContainers[i].style.width = "240px";
+}
+prodImageContainersWrappers = document.querySelectorAll(
+    ".product-image-container-2  span.product-image-wrapper"
+);
+for (var i = 0; i < prodImageContainersWrappers.length; i++) {
+    prodImageContainersWrappers[i].style.paddingBottom = "125%";
+}</script>                            </a>
+                            <div class="product-item-details">
+                                <strong class="product-item-name">
+                                    <a title="Viterna Premium Whey Isolate"
+                                       href="http://localhost/OnlyApproved/index.php/viterna-premium-whey-isolate.html"
+                                       class="product-item-link">
+                                        Viterna Premium Whey Isolate                                    </a>
+                                </strong>
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="2" data-price-box="product-id-2">
+    
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="old-price-2-widget-new-grid"                data-price-amount="34.9"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">$34.90</span></span>
+        </span>
+
+</div>
+                                                                                                    
+                                                                    <div class="product-item-actions">
+                                                                                    <div class="actions-primary">
+                                                                                                                                                                                                                    <button class="action tocart primary"
+                                                                data-post='{"action":"http:\/\/localhost\/OnlyApproved\/index.php\/checkout\/cart\/add\/uenc\/aHR0cDovL2xvY2FsaG9zdC9Pbmx5QXBwcm92ZWQvaW5kZXgucGhwLw~~\/product\/2\/","data":{"product":2,"uenc":"aHR0cDovL2xvY2FsaG9zdC9Pbmx5QXBwcm92ZWQvaW5kZXgucGhwLw~~"}}'
+                                                                type="button"
+                                                                title="Add&#x20;to&#x20;Cart">
+                                                            <span>Add to Cart</span>
+                                                        </button>
+                                                                                                                                                </div>
+                                                                                                                            <div class="actions-secondary" data-role="add-to-links">
+                                                                                                    <a href="#"
+                                                       data-post='{"action":"http:\/\/localhost\/OnlyApproved\/index.php\/wishlist\/index\/add\/","data":{"product":2,"uenc":"aHR0cDovL2xvY2FsaG9zdC9Pbmx5QXBwcm92ZWQvaW5kZXgucGhwLw~~"}}'
+                                                       class="action towishlist"
+                                                       data-action="add-to-wishlist"
+                                                       title="Add&#x20;to&#x20;Wish&#x20;List">
+                                                        <span>Add to Wish List</span>
+                                                    </a>
+                                                                                                                                                                                                        <a href="#" class="action tocompare"
+                                                       data-post='{"action":"http:\/\/localhost\/OnlyApproved\/index.php\/catalog\/product_compare\/add\/","data":{"product":"2","uenc":"aHR0cDovL2xvY2FsaG9zdC9Pbmx5QXBwcm92ZWQvaW5kZXgucGhwLw~~"}}'
+                                                       title="Add&#x20;to&#x20;Compare">
+                                                        <span>Add to Compare</span>
+                                                    </a>
+                                                                                            </div>
+                                                                            </div>
+                                                            </div>
+                        </div>
+                     </li>
+                                        <li class="product-item">
+                        <div class="product-item-info">
+                            <a href="http://localhost/OnlyApproved/index.php/life-extension-vitamin-d3-1000-iu.html"
+                               class="product-item-photo">
+                                <span class="product-image-container product-image-container-1">
+    <span class="product-image-wrapper">
+        <img class="product-image-photo"
+                        src="http://localhost/OnlyApproved/pub/media/catalog/product/cache/202dcbdf01bb93195b1b919d21250728/p/o/popular_product_2.png"
+            loading="lazy"
+            width="240"
+            height="300"
+            alt="Life&#x20;Extension&#x20;Vitamin&#x20;D3&#x20;&#x28;1000&#x20;IU&#x29;"/></span>
+</span>
+<style>.product-image-container-1 {
+    width: 240px;
+}
+.product-image-container-1 span.product-image-wrapper {
+    padding-bottom: 125%;
+}</style><script type="text&#x2F;javascript">prodImageContainers = document.querySelectorAll(".product-image-container-1");
+for (var i = 0; i < prodImageContainers.length; i++) {
+    prodImageContainers[i].style.width = "240px";
+}
+prodImageContainersWrappers = document.querySelectorAll(
+    ".product-image-container-1  span.product-image-wrapper"
+);
+for (var i = 0; i < prodImageContainersWrappers.length; i++) {
+    prodImageContainersWrappers[i].style.paddingBottom = "125%";
+}</script>                            </a>
+                            <div class="product-item-details">
+                                <strong class="product-item-name">
+                                    <a title="Life Extension Vitamin D3 (1000 IU)"
+                                       href="http://localhost/OnlyApproved/index.php/life-extension-vitamin-d3-1000-iu.html"
+                                       class="product-item-link">
+                                        Life Extension Vitamin D3 (1000 IU)                                    </a>
+                                </strong>
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1" data-price-box="product-id-1">
+    
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="old-price-1-widget-new-grid"                data-price-amount="12.72"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">$12.72</span></span>
+        </span>
+
+</div>
+                                                                                                    
+                                                                    <div class="product-item-actions">
+                                                                                    <div class="actions-primary">
+                                                                                                                                                                                                                    <button class="action tocart primary"
+                                                                data-post='{"action":"http:\/\/localhost\/OnlyApproved\/index.php\/checkout\/cart\/add\/uenc\/aHR0cDovL2xvY2FsaG9zdC9Pbmx5QXBwcm92ZWQvaW5kZXgucGhwLw~~\/product\/1\/","data":{"product":1,"uenc":"aHR0cDovL2xvY2FsaG9zdC9Pbmx5QXBwcm92ZWQvaW5kZXgucGhwLw~~"}}'
+                                                                type="button"
+                                                                title="Add&#x20;to&#x20;Cart">
+                                                            <span>Add to Cart</span>
+                                                        </button>
+                                                                                                                                                </div>
+                                                                                                                            <div class="actions-secondary" data-role="add-to-links">
+                                                                                                    <a href="#"
+                                                       data-post='{"action":"http:\/\/localhost\/OnlyApproved\/index.php\/wishlist\/index\/add\/","data":{"product":1,"uenc":"aHR0cDovL2xvY2FsaG9zdC9Pbmx5QXBwcm92ZWQvaW5kZXgucGhwLw~~"}}'
+                                                       class="action towishlist"
+                                                       data-action="add-to-wishlist"
+                                                       title="Add&#x20;to&#x20;Wish&#x20;List">
+                                                        <span>Add to Wish List</span>
+                                                    </a>
+                                                                                                                                                                                                        <a href="#" class="action tocompare"
+                                                       data-post='{"action":"http:\/\/localhost\/OnlyApproved\/index.php\/catalog\/product_compare\/add\/","data":{"product":"1","uenc":"aHR0cDovL2xvY2FsaG9zdC9Pbmx5QXBwcm92ZWQvaW5kZXgucGhwLw~~"}}'
+                                                       title="Add&#x20;to&#x20;Compare">
+                                                        <span>Add to Compare</span>
+                                                    </a>
+                                                                                            </div>
+                                                                            </div>
+                                                            </div>
+                        </div>
+                     </li>
+                                    </ol>
+            </div>
+            
+        <div class="pager">
+    
+                <p class="toolbar-amount">
+            <span class="toolbar-number">
+                            5 Item(s)                        </span>
+        </p>
+        
+        
+    
+        </div>
+    
+        </div>
+    </div>

@@ -5,9 +5,9 @@ body {
   background-color: #ffffff;
 }
 .page-header .header.content {
-  max-width: 1350px;
+  max-width: 1390px;
   display: flex;
-  padding: 24px 0px;
+  padding: 24px 20px;
   align-items: center;
 }
 .page-header .header.content .logo {
@@ -202,37 +202,73 @@ body {
   font-weight: 500;
   font-size: 25px;
 }
+.nav-sections-item-content {
+  position: relative;
+}
 .nav-sections-item-content > .navigation {
-  max-width: 100%;
-  min-width: 0;
+  max-width: 1390px;
+  position: static;
 }
 .nav-sections-item-content > .navigation > ul {
-  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0;
+  padding: 0 20px;
   position: static;
-  margin: 0 auto;
-  max-width: 1350px;
+  margin: 0;
 }
 .page-main {
   background-color: transparent;
-  max-width: 1350px;
+  max-width: 1390px;
 }
 .page-main .columns .main > p {
   display: none;
 }
-[data-content-type="row"][data-appearance="contained"]:nth-child(3) .page-layout-1column .block.widget .products-grid .product-item {
-  background-color: #fff;
-  padding: 15px;
+.row-one {
+  margin-bottom: 20px;
 }
-.pagebuilder-column {
+.row-one .pagebuilder-column {
+  margin: 0;
+  padding: 0;
+}
+.row-two .block.widget .products-grid .product-item {
   background-color: #fff;
-  padding: 15px;
+  padding: 20px;
+}
+.row-two .block.widget .products-grid .product-item .product-item-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product-item .price-box {
+  float: left;
+}
+.action.tocart.primary {
+  border: 1px solid silver;
+  color: grey;
+  background-color: transparent;
+  padding: 5px;
+}
+.product-item-actions {
+  text-align: end;
+  float: right;
+}
+.product-item-actions .actions-secondary {
+  display: none;
+}
+.row-three {
+  margin-bottom: 20px;
+}
+.row-three .pagebuilder-column {
   margin-left: 20px;
+  background-color: #fff;
+  padding: 20px;
 }
-.pagebuilder-column:first-child {
+.row-three .pagebuilder-column:first-child {
   margin-left: 0;
+}
+.row-four .block.widget .products-grid .product-item {
+  background-color: #fff;
+  padding: 20px;
 }
 .page-footer .footer-sub-container {
   width: 100%;

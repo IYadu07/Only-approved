@@ -1,0 +1,14 @@
+<?php
+$productCollection = $block->getProductCollection();
+?>
+<div class="product-list">
+    <?php if ($productCollection && $productCollection->getSize() > 0): ?>
+        <ul>
+            <?php foreach ($productCollection as $product): ?>
+                <li><?php echo $block->escapeHtml($product->getName()); ?></li>
+            <?php endforeach; ?>
+        </ul>
+    <?php else: ?>
+        <p>No products found.</p>
+    <?php endif; ?>
+</div>
