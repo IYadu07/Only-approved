@@ -6,12 +6,12 @@
 
         <referenceBlock name="header.panel.wrapper" remove="true" />
         <referenceBlock name="advanced-search-link" remove="true" />
-        <referenceBlock name="columns.top" remove="true" />
+        <!-- <referenceBlock name="columns.top" remove="true" /> -->
         <referenceBlock name="footer" remove="true" />
-        <referenceBlock name="navigationMenu" remove="true" />
+        <!-- <referenceBlock name="navigationMenu" remove="true" /> -->
         <referenceBlock name="breadcrumbs" remove="true" />
-        <referenceBlock name="div.sidebar.main" remove="true" />
-        <referenceBlock name="div.sidebar.additional" remove="true" />
+        <!-- <referenceBlock name="div.sidebar.main" remove="true" /> -->
+        <!-- <referenceBlock name="div.sidebar.additional" remove="true" /> -->
         
         <!-- Logo -->
 
@@ -57,22 +57,22 @@
         <move element="minicart" destination="item-minicart-container-inner" before="-"/>
 
 
-        <referenceContainer name="content">
+        <!-- <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" name="custom.product.list" template="Magento_Theme::list.phtml"/>
-        </referenceContainer>
+        </referenceContainer> -->
 
         <!-- <move element="minicart" destination="item-minicart-container-inner" before="item-minicart"/> -->
 
 
         <!-- <block class="Magento\Framework\View\Element\Template" name="item-minicart" template="Magento_Theme::minicart.phtml"/> -->
 
-        <referenceContainer name="store.links">
+        <!-- <referenceContainer name="store.links">
             <block class="Magento\Framework\View\Element\Template" name="custom.script" template="Magento_Theme::header-carousel.phtml"/>
         </referenceContainer>
 
         <referenceBlock name="page.top">
             <block class="Magento\Framework\View\Element\Template" name="header-carousel" template="Magento_Theme::header-carousel.phtml"/>
-        </referenceBlock>
+        </referenceBlock> -->
 
         <!-- footer -->
 
