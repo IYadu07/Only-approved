@@ -14,7 +14,6 @@ body {
   margin: 0px;
   width: 320px;
   margin-right: auto;
-  min-width: 300px;
 }
 .page-header .header.content .nav-container {
   display: flex;
@@ -47,6 +46,19 @@ body {
   color: #000000;
   line-height: 32px;
 }
+@media screen and (max-width: 768px) {
+  .page-header .header.content .nav-container .block-search .action.search {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    border: 0;
+    margin: 0;
+    height: 100%;
+    background-color: #e8e8e8;
+  }
+}
 .page-header .header.content .nav-container .action.search {
   margin: 7px 5px 0px 0px;
   height: 32px;
@@ -57,6 +69,12 @@ body {
   margin-left: 30px;
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 991px) {
+  .page-header .header.content .nav-container .trustPilotLogo-container,
+  .page-header .header.content .nav-container .blue-logo-container {
+    display: none;
+  }
 }
 .page-header .header.content .nav-container .flag-and-select-container {
   display: flex;
@@ -119,6 +137,7 @@ body {
   color: #4a4a4a;
   font-size: 1.4rem;
   margin-top: 5px;
+  min-width: max-content;
 }
 .page-header .header.content .nav-container .user-item:first-child:before {
   content: "";
@@ -177,13 +196,21 @@ body {
   background-size: cover;
   background-position: center;
 }
+.split-container-two {
+  display: none;
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+  min-height: 50px;
+}
 .navigation .level0 {
   margin: 0;
   position: static;
 }
 .navigation .level0 > .level-top {
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   padding: 0;
 }
 .navigation .level0 > .level-top:hover {
@@ -209,6 +236,9 @@ body {
   max-width: 1390px;
   position: static;
 }
+.nav-sections-item-content > .navigation .level0 .submenu {
+  z-index: 2;
+}
 .nav-sections-item-content > .navigation > ul {
   display: flex;
   justify-content: space-between;
@@ -216,59 +246,100 @@ body {
   position: static;
   margin: 0;
 }
-.page-main {
-  background-color: transparent;
-  max-width: 1390px;
+#html-body [data-pb-style=EYTSFPH],
+#html-body [data-pb-style=XQ0M8V0] {
+  height: 100%;
 }
-.page-main .columns .main > p {
-  display: none;
-}
-.row-one {
-  margin-bottom: 20px;
-}
-.row-one .pagebuilder-column {
-  margin: 0;
-  padding: 0;
-}
-.row-two .block.widget .products-grid .product-item {
-  background-color: #fff;
-  padding: 20px;
-}
-.row-two .block.widget .products-grid .product-item .product-item-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.product-item .price-box {
-  float: left;
-}
-.action.tocart.primary {
-  border: 1px solid silver;
-  color: grey;
-  background-color: transparent;
-  padding: 5px;
-}
-.product-item-actions {
-  text-align: end;
-  float: right;
-}
-.product-item-actions .actions-secondary {
-  display: none;
-}
-.row-three {
-  margin-bottom: 20px;
-}
-.row-three .pagebuilder-column {
-  margin-left: 20px;
-  background-color: #fff;
-  padding: 20px;
-}
-.row-three .pagebuilder-column:first-child {
-  margin-left: 0;
-}
-.row-four .block.widget .products-grid .product-item {
-  background-color: #fff;
-  padding: 20px;
+@media screen and (max-width: 768px) {
+  .page-header .header.content .nav-container .block-search {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 20%;
+    width: auto;
+    margin: 0;
+    border-radius: 0;
+    z-index: 2;
+    background-color: #e8e8e8;
+  }
+  .block-search .control {
+    border: 0;
+    width: 100%;
+    margin: 0;
+  }
+  .page-header .header.content .nav-container .block-search input {
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+  }
+  .block-search input {
+    position: static;
+    margin: 0;
+    background-color: #f4f4f4;
+  }
+  .block-search .label {
+    display: none;
+  }
+  .block-search .action.search > span {
+    display: none;
+  }
+  .block-search .action.search:before {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 22px;
+    line-height: 22px;
+    color: #8f8f8f;
+    content: '\e615';
+    font-family: 'icons-blank-theme';
+    margin: auto;
+    vertical-align: top;
+    display: inline-block;
+    font-weight: normal;
+    speak: none;
+    text-align: center;
+  }
+  .nav-sections {
+    position: static;
+    width: 100%;
+    display: none;
+    z-index: 2;
+  }
+  .page-header {
+    margin-bottom: 0px;
+    border-bottom: 0;
+    position: relative;
+  }
+  .nav-sections-item-title {
+    display: none;
+  }
+  .nav-sections-item-content > .navigation > ul {
+    display: block;
+  }
+  .navigation .parent .level-top:after {
+    top: -90%;
+  }
+  .navigation .level0 {
+    border: 0;
+    padding: 10px 0px;
+  }
+  .navigation .level0 .all-category {
+    display: none;
+  }
+  .nav-sections-item-content {
+    float: none;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0;
+  }
+  .navigation li.level0:last-child {
+    border-bottom: 0;
+  }
+  .page-main {
+    margin-top: 70px;
+  }
+  .pagebuilder-column {
+    flex-basis: 50%;
+  }
 }
 .page-footer .footer-sub-container {
   width: 100%;
@@ -324,42 +395,6 @@ body {
   width: 1px;
   background-color: #dadada;
   margin: auto 30px;
-}
-.block.newsletter {
-  margin: 0 0 0 115px;
-  max-width: 280px;
-  width: 100%;
-}
-.block.newsletter .field {
-  margin-right: 0;
-}
-.block.newsletter .field .control:before {
-  content: "";
-}
-.block.newsletter .form.subscribe {
-  display: flex;
-}
-.block.newsletter .field.newsletter {
-  max-width: 350px;
-  width: 100%;
-}
-.block.newsletter input {
-  height: 43px;
-  width: 350px;
-  padding: 0 0 0 20px;
-  box-shadow: none;
-}
-.block.newsletter .action.subscribe {
-  border-radius: 0px 25px 25px 0px;
-  height: 43px;
-  background-color: #ff0000;
-  font-size: 1.4rem;
-  width: 110px;
-  font-weight: 900;
-  border: none;
-}
-input[type="email"] {
-  border-radius: 25px 0px 0px 25px;
 }
 .footer-nav-container {
   display: flex;
@@ -481,4 +516,17 @@ input[type="email"] {
 .footer-items {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 991px) {
+  .section-container {
+    display: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  .trustPilotLogo-container {
+    display: none;
+  }
+  .blue-logo-container {
+    display: none;
+  }
 }

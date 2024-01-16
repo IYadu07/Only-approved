@@ -502,7 +502,7 @@ return $.widget( "ui.menu", {
 			.show()
 			.removeAttr( "aria-hidden" )
 			.attr( "aria-expanded", "true" )
-			.position( position );
+			// .position( position );
 	},
 
 	collapseAll: function( event, all ) {
