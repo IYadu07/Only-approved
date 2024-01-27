@@ -1,0 +1,158 @@
+<div class="about-products-container">
+    <div class="drp-container">
+        <button class="dropdown-btn" type="button" data-target="#drp1">
+            Discription<svg fill="#e00616" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#e00616">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <g>
+                        <g>
+                            <path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M377.749,228.416 L271.083,335.083c-4.16,4.16-9.621,6.251-15.083,6.251c-5.462,0-10.923-2.091-15.083-6.251L134.251,228.416 c-8.341-8.341-8.341-21.824,0-30.165s21.824-8.341,30.165,0L256,289.835l91.584-91.584c8.341-8.341,21.824-8.341,30.165,0 C386.091,206.592,386.091,220.075,377.749,228.416z">
+                            </path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </button>
+        <div class="drop-menu" id="drp1">
+            <?php
+            /**
+             * @var \Magento\Catalog\Api\ProductRepositoryInterface $productRepository
+             */
+            $productRepository = \Magento\Framework\App\ObjectManager::getInstance()->get(\Magento\Catalog\Api\ProductRepositoryInterface::class);
+
+            try {
+                // Load product by ID
+                $productId = 6;
+                $product = $productRepository->getById($productId);
+
+                // Display product description
+                echo $product->getDescription();
+            } catch (\Magento\Framework\Exception\NoSuchEntityException $e) {
+                // Handle exception if product with ID 6 does not exist
+                echo "Product not found.";
+            }
+            ?>
+        </div>
+    </div>
+
+    <div class="drp-container">
+        <button class="dropdown-btn" type="button" data-target="#drp2">
+            Suggested Use<svg fill="#e00616" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#e00616">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <g>
+                        <g>
+                            <path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M377.749,228.416 L271.083,335.083c-4.16,4.16-9.621,6.251-15.083,6.251c-5.462,0-10.923-2.091-15.083-6.251L134.251,228.416 c-8.341-8.341-8.341-21.824,0-30.165s21.824-8.341,30.165,0L256,289.835l91.584-91.584c8.341-8.341,21.824-8.341,30.165,0 C386.091,206.592,386.091,220.075,377.749,228.416z">
+                            </path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </button>
+        <div class="drop-menu" id="drp2">
+            <h6>Content goes here</h6>
+        </div>
+    </div>
+
+    <div class="drp-container">
+        <button class="dropdown-btn" type="button" data-target="#drp3">
+            Ingredients<svg fill="#e00616" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#e00616">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <g>
+                        <g>
+                            <path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M377.749,228.416 L271.083,335.083c-4.16,4.16-9.621,6.251-15.083,6.251c-5.462,0-10.923-2.091-15.083-6.251L134.251,228.416 c-8.341-8.341-8.341-21.824,0-30.165s21.824-8.341,30.165,0L256,289.835l91.584-91.584c8.341-8.341,21.824-8.341,30.165,0 C386.091,206.592,386.091,220.075,377.749,228.416z">
+                            </path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </button>
+        <div class="drop-menu" id="drp3">
+            <h6>Content goes here</h6>
+        </div>
+    </div>
+
+    <div class="drp-container">
+        <button class="dropdown-btn" type="button" data-target="#drp4">
+            Product details<svg fill="#e00616" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#e00616">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <g>
+                        <g>
+                            <path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M377.749,228.416 L271.083,335.083c-4.16,4.16-9.621,6.251-15.083,6.251c-5.462,0-10.923-2.091-15.083-6.251L134.251,228.416 c-8.341-8.341-8.341-21.824,0-30.165s21.824-8.341,30.165,0L256,289.835l91.584-91.584c8.341-8.341,21.824-8.341,30.165,0 C386.091,206.592,386.091,220.075,377.749,228.416z">
+                            </path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </button>
+        <div class="drop-menu product-details-menu" id="drp4">
+            <?php
+            /**
+             * @var \Magento\Catalog\Block\Product\View\Description $block
+             */
+            $block = $this->getLayout()->getBlock('product.info.overview');
+            if ($block) {
+                echo $block->toHtml();
+            }
+            ?>
+        </div>
+    </div>
+
+    <div class="drp-container">
+        <button class="dropdown-btn" type="button" data-target="#drp5">
+            Reviews<svg fill="#e00616" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#e00616">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <g>
+                        <g>
+                            <path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M377.749,228.416 L271.083,335.083c-4.16,4.16-9.621,6.251-15.083,6.251c-5.462,0-10.923-2.091-15.083-6.251L134.251,228.416 c-8.341-8.341-8.341-21.824,0-30.165s21.824-8.341,30.165,0L256,289.835l91.584-91.584c8.341-8.341,21.824-8.341,30.165,0 C386.091,206.592,386.091,220.075,377.749,228.416z">
+                            </path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </button>
+        <div class="drop-menu" id="drp5">
+            <?php
+            /**
+             * @var \Magento\Review\Model\ReviewFactory $reviewFactory
+             * @var \Magento\Review\Model\ResourceModel\Review\CollectionFactory $reviewCollectionFactory
+             * @var \Magento\Store\Model\StoreManagerInterface $storeManager
+             */
+            $reviewFactory = \Magento\Framework\App\ObjectManager::getInstance()->get(\Magento\Review\Model\ReviewFactory::class);
+            $reviewCollectionFactory = \Magento\Framework\App\ObjectManager::getInstance()->get(\Magento\Review\Model\ResourceModel\Review\CollectionFactory::class);
+            $storeManager = \Magento\Framework\App\ObjectManager::getInstance()->get(\Magento\Store\Model\StoreManagerInterface::class);
+
+            try {
+                // Product ID for which reviews are fetched
+                $productId = 6;
+
+                // Load product reviews
+                $productReviews = $reviewCollectionFactory->create()
+                    ->addStatusFilter(\Magento\Review\Model\Review::STATUS_APPROVED)
+                    ->addEntityFilter('product', $productId)
+                    ->setDateOrder();
+
+                // Display reviews
+                foreach ($productReviews as $review) {
+                    echo 'Review Title: ' . $review->getTitle() . '<br>';
+                    echo 'Review Details: ' . $review->getDetail() . '<br>';
+                    echo 'Rating: ' . $review->getRatingVotes() . '<br>';
+                    echo 'Customer: ' . $review->getNickname() . '<br>';
+                    echo '<hr>';
+                }
+            } catch (\Exception $e) {
+                // Handle exceptions if any
+                echo "Error: " . $e->getMessage();
+            }
+            ?>
+        </div>
+    </div>
+</div>
