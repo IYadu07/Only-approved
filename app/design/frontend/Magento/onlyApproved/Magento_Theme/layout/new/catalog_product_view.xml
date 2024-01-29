@@ -38,7 +38,7 @@
 
 
 
-        <!-- <referenceContainer name="content">
+        <referenceContainer name="content">
             <container name="product.info.main" htmlTag="div" htmlClass="product-info-main" before="-">
                 <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.overview" template="Magento_Catalog::product/view/attribute.phtml" group="detailed_info" after="page.main.title">
                     <arguments>
@@ -53,7 +53,7 @@
                 <container name="product.info.price" label="Product info auxiliary container" htmlTag="div" htmlClass="product-info-price">
                     <container name="product.info.stock.sku" label="Product auxiliary info" htmlTag="div" htmlClass="product-info-stock-sku">
                         <container name="product.info.type" before="-"/> -->
-                        <!-- <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.sku" template="Magento_Catalog::product/view/attribute.phtml" after="product.info.type">
+                        <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.sku" template="Magento_Catalog::product/view/attribute.phtml" after="product.info.type">
                             <arguments>
                                 <argument name="at_call" xsi:type="string">getSku</argument>
                                 <argument name="at_code" xsi:type="string">sku</argument>
@@ -61,10 +61,10 @@
                                 <argument name="at_label" xsi:type="string">default</argument>
                                 <argument name="add_attribute" xsi:type="string">itemprop="sku"</argument>
                             </arguments>
-                        </block> -->
-                    <!-- </container> -->
-                    <!-- <block class="Magento\Catalog\Block\Product\View" name="product.info.review" template="Magento_Catalog::product/view/review.phtml" after="product.info.stock.sku" /> -->
-                    <!-- <block class="Magento\Catalog\Pricing\Render" name="product.price.final">
+                        </block>
+                    </container>
+                    <block class="Magento\Catalog\Block\Product\View" name="product.info.review" template="Magento_Catalog::product/view/review.phtml" after="product.info.stock.sku" />
+                    <block class="Magento\Catalog\Pricing\Render" name="product.price.final">
                         <arguments>
                             <argument name="price_render" xsi:type="string">product.price.render.default</argument>
                             <argument name="price_type_code" xsi:type="string">final_price</argument>
@@ -172,8 +172,8 @@
                     </argument>
                 </arguments>
             </block>
-        </referenceContainer> -->
-        <!-- <referenceContainer name="content.aside">
+        </referenceContainer>
+        <referenceContainer name="content.aside">
             <block class="Magento\Catalog\Block\Product\ProductList\Related" name="catalog.product.related" template="Magento_Catalog::product/list/items.phtml">
                 <arguments>
                     <argument name="type" xsi:type="string">related</argument>
@@ -193,7 +193,7 @@
                 </block>
             </block>
             <block class="Magento\Catalog\Block\Product\View\Additional" name="product.info.additional" as="product_additional_data"/>
-        </referenceContainer> -->
+        </referenceContainer>
         <referenceBlock name="product.info.addtocart">
             <block class="Magento\Catalog\Block\ShortcutButtons\InCatalog" name="addtocart.shortcut.buttons"/>
         </referenceBlock>
@@ -206,18 +206,18 @@
 
         <!-- Added element -->
 
-        <referenceContainer name="content.aside">
+        <!-- <referenceContainer name="content.aside">
             <container name="product.discription.container" after="-">
                 <block name="custom-product-discription" template="Magento_Theme::custom-description.phtml"/>
             </container>
-        </referenceContainer>
+        </referenceContainer> -->
 
 
 
         <!-- Moved Elements -->
 
-        <move element="product.info.review" destination="page.main.title" before="-"/>
-        <move element="page.main.title" destination="product.info.main" before="-"/>
+        <!-- <move element="product.info.review" destination="page.main.title" before="-"/>
+        <move element="page.main.title" destination="product.info.main" before="-"/> -->
         <!-- <move element="custom-product-discription" destination="product.info.details" after="-"/> -->
     </body>
 </page>
