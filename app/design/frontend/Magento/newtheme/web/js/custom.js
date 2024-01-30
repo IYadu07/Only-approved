@@ -72,9 +72,13 @@ define(["jquery", "owl-carousel"], function ($, owlCarousel) {
         }
         setProductItemHeight(".popular-products");
         setProductItemHeight(".newly-arrived-products");
+        setProductItemHeight(".products.wrapper.grid.products-grid");
+
         $(window).on("resize", function () {
             setProductItemHeight(".popular-products");
             setProductItemHeight(".newly-arrived-products");
+            setProductItemHeight(".products.wrapper.grid.products-grid");
+
         });
 
         // Function to wrap price-box and product-item-inner within a custom container
@@ -92,6 +96,7 @@ define(["jquery", "owl-carousel"], function ($, owlCarousel) {
         // Apply the function to popular products and newly arrived products
         wrapProductItems(".popular-products");
         wrapProductItems(".newly-arrived-products");
+        wrapProductItems(".products.wrapper.grid.products-grid");
 
         // Iterate over each .product-item-info
         $(".product-item-info").each(function () {
@@ -100,7 +105,23 @@ define(["jquery", "owl-carousel"], function ($, owlCarousel) {
 
             // Calculate the height of the current .product-item-info relative to .popular-products
             var productInfoHeight = $(this).height();
-            var productItemDetailsHeight = productInfoHeight - 280;
+            var productItemDetailsHeight = productInfoHeight - 290;
+            $(".product-item-details").height(productItemDetailsHeight);
+
+            // Find the nearest ancestor with class .popular-products
+            var popularProductsContainer = $(this).closest(".newly-arrived-products");
+
+            // Calculate the height of the current .product-item-info relative to .popular-products
+            var productInfoHeight = $(this).height();
+            var productItemDetailsHeight = productInfoHeight - 290;
+            $(".product-item-details").height(productItemDetailsHeight);
+
+            // Find the nearest ancestor with class .popular-products
+            var popularProductsContainer = $(this).closest(".products.wrapper.grid.products-grid");
+
+            // Calculate the height of the current .product-item-info relative to .popular-products
+            var productInfoHeight = $(this).height();
+            var productItemDetailsHeight = productInfoHeight - 290;
             $(".product-item-details").height(productItemDetailsHeight);
         });
 
@@ -174,20 +195,20 @@ define(["jquery", "owl-carousel"], function ($, owlCarousel) {
         }
 
         // Hide all drop-menus initially
-        $('.drop-menu').hide();
+        $(".drop-menu").hide();
 
         // Attach click event to all dropdown buttons
-        $('.dropdown-btn').click(function () {
+        $(".dropdown-btn").click(function () {
             // Toggle the associated drop-menu
-            var targetMenu = $($(this).data('target'));
+            var targetMenu = $($(this).data("target"));
             targetMenu.slideToggle();
 
             // Rotate the arrow icon 180 degrees
-            $(this).find('svg').toggleClass('rotate');
-            
+            $(this).find("svg").toggleClass("rotate");
+
             // Close other open drop-menus
-            $('.drop-menu').not(targetMenu).slideUp();
-            $('svg').not($(this).find('svg')).removeClass('rotate');
+            $(".drop-menu").not(targetMenu).slideUp();
+            $("svg").not($(this).find("svg")).removeClass("rotate");
         });
     });
 });
