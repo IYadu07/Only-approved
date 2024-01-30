@@ -222,7 +222,7 @@
 
         <referenceBlock name="product.info.sku" remove="true" />
         <referenceBlock name="product.info.extrahint" remove="true" />
-        <!-- <referenceBlock name="product.info.details" remove="true" /> -->
-
+        <referenceBlock name="product.info.details" remove="true" />
+        
     </body>
 </page>
