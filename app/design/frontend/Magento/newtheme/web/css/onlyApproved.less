@@ -620,7 +620,7 @@ body {
                 background-color: #fff;
 
                 .product-item-info {
-                    height: 100%;
+                    height: fit-content;
                     position: relative;
 
                     .product-item-details {
@@ -1717,7 +1717,16 @@ body {
     font-weight: 600;
     color: #333333;
 }
-#maincontent, .page-main {
+
+
+#maincontent,
+.page-main {
+    max-width: 1375px;
+
+    .column.main {
+        width: 100%;
+        padding: 0;
+    }
 
     .product-listing-row {
         .amino-acids-para,
@@ -1745,12 +1754,18 @@ body {
 
     .products-grid {
         .product-item {
-            margin-bottom: 12px;
+            margin-bottom: 2%;
             padding: 25px;
             background-color: #fff;
+            // margin-left: 2%;
+            // width: 19%;
+
+            // &:first-child, &:nth-child(6) {
+            //     margin-left: 0;
+            // }
 
             .product-item-info {
-                height: 100%;
+                height: fit-content;
                 position: relative;
 
                 .product-item-details {
@@ -1792,8 +1807,49 @@ body {
             }
         }
     }
-}
 
+    .page-bottom {
+        margin-bottom: 40px;
+
+        .container {
+            margin-bottom: 30px;
+
+            h5 {
+                font-size: 1.7rem;
+                color: #333333;
+            }
+            p {
+                font-size: 1.4rem;
+            }
+        }
+        .card-group {
+            .row {
+                display: flex;
+
+                .col {
+                    margin-left: 50px;
+
+                    .card {
+                        .card-body {
+                            .card-title,
+                            .card-text {
+                                text-align: center;
+                            }
+
+                            .card-title {
+                                font-size: 1.7rem;
+                                margin: 1rem 0rem;
+                            }
+                        }
+                    }
+                    &:first-child {
+                        margin-left: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
 
 // .top-heading-row-plp {
 //     h3 {
