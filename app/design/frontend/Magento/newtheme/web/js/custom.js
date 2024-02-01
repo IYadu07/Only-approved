@@ -76,28 +76,6 @@ define(["jquery", "owl-carousel"], function ($, owlCarousel) {
         wrapProductItems(".newly-arrived-products");
         wrapProductItems(".products.wrapper.grid.products-grid");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         function setMaxHeight(elements, selector, referenceElement) {
             var maxHeight = 0;
         
@@ -118,9 +96,8 @@ define(["jquery", "owl-carousel"], function ($, owlCarousel) {
           // Function to update heights on window resize
           function updateHeights() {
             // Update heights for each group
-            setMaxHeight($('.popular-products .product-item'), '.product-item-name', $('.popular-products .product-item').first());
-            setMaxHeight($('.newly-arrived-products .product-item'), '.product-item-name', $('.newly-arrived-products .product-item').first());
-            setMaxHeight($('.standalone-products .product-item'), '.product-item-name', $('.standalone-products .product-item').first());
+            
+            setMaxHeight($('.products-grid .product-item'), '.product-item-name', $('.products-grid .product-item').first());
           }
         
           // Initial height setup
@@ -130,69 +107,6 @@ define(["jquery", "owl-carousel"], function ($, owlCarousel) {
           $(window).resize(function () {
             updateHeights();
           });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // function setProductItemHeight(containerSelector) {
-        //     var maxHeight = 0;
-        //     $(containerSelector + " .product-item").height("auto");
-        //     $(containerSelector + " .product-item").each(function () {
-        //         var currentHeight = $(this).height();
-        //         if (currentHeight > maxHeight) {
-        //             maxHeight = currentHeight;
-        //         }
-        //     });
-        //     $(containerSelector + " .product-item").height(maxHeight);
-        // }
-        // setProductItemHeight(".popular-products");
-        // setProductItemHeight(".newly-arrived-products");
-        // setProductItemHeight(".products.wrapper.grid.products-grid");
-
-        // $(window).on("resize", function () {
-        //     setProductItemHeight(".popular-products");
-        //     setProductItemHeight(".newly-arrived-products");
-        //     setProductItemHeight(".products.wrapper.grid.products-grid");
-
-        // });
-
-        // // Iterate over each .product-item-info
-        // $(".product-item-info").each(function () {
-        //     // Find the nearest ancestor with class .popular-products
-        //     var popularProductsContainer = $(this).closest(".popular-products");
-
-        //      // Calculate the height of the current .product-item-info relative to .popular-products
-        //     var productInfoHeight = $(this).height();
-        //     var productItemDetailsHeight = productInfoHeight - 290;
-        //     $(".product-item-details").height(productItemDetailsHeight);
-
-        //     // Find the nearest ancestor with class .popular-products
-        //     var popularProductsContainer = $(this).closest(".newly-arrived-products");
-
-        //     // Calculate the height of the current .product-item-info relative to .popular-products
-        //     var productInfoHeight = $(this).height();
-        //     var productItemDetailsHeight = productInfoHeight - 290;
-        //     $(".product-item-details").height(productItemDetailsHeight);
-
-        //     // Find the nearest ancestor with class .popular-products
-        //     var popularProductsContainer = $(this).closest(".products.wrapper.grid.products-grid");
-
-        //     // Calculate the height of the current .product-item-info relative to .popular-products
-        //     var productInfoHeight = $(this).height();
-        //     var productItemDetailsHeight = productInfoHeight - 290;
-        //     $(".product-item-details").height(productItemDetailsHeight);
-        // });
 
         // Footer navbar
 
@@ -235,6 +149,18 @@ define(["jquery", "owl-carousel"], function ($, owlCarousel) {
 
         // Product-details-page starts here
 
+        // Find the span element inside the product-info-stock-sku class
+        var $stockSpan = $(".product-info-stock-sku .stock span");
+
+        // Check if the text inside the span is 'In stock'
+        if ($stockSpan.text().trim() === "In stock") {
+            // If 'In stock', change the text color to green
+            $stockSpan.css("color", "#2baa67");
+        } else {
+            // If not 'In stock', change the text color to red
+            $stockSpan.css("color", "#e30514");
+        }
+
         // Cart buttons
 
         $(".dec").on("click", function () {
@@ -250,18 +176,6 @@ define(["jquery", "owl-carousel"], function ($, owlCarousel) {
                 $("#qty").val(currentQty + 1);
             }
         });
-
-        // Find the span element inside the product-info-stock-sku class
-        var $stockSpan = $(".product-info-stock-sku .stock span");
-
-        // Check if the text inside the span is 'In stock'
-        if ($stockSpan.text().trim() === "In stock") {
-            // If 'In stock', change the text color to green
-            $stockSpan.css("color", "#2baa67");
-        } else {
-            // If not 'In stock', change the text color to red
-            $stockSpan.css("color", "#e30514");
-        }
 
         // Hide all drop-menus initially
         $(".drop-menu").hide();

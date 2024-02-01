@@ -14,9 +14,12 @@ use Magento\Framework\App\Action\Action;
 <?php if ($exist = ($block->getProductCollection() && $block->getProductCollection()->getSize())): ?>
     <?php
     $type = 'widget-product-grid';
+
     $mode = 'grid';
+
     $image = 'new_products_content_widget_grid';
     $items = $block->getProductCollection()->getItems();
+
     $showWishlist = true;
     $showCompare = true;
     $showCart = true;
@@ -44,7 +47,7 @@ use Magento\Framework\App\Action\Action;
                                 <strong class="product-item-name">
                                     <a title="<?= $block->escapeHtml($_item->getName()) ?>"
                                        href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"
-                                       class="product-item-link" data-full-name="<?= $block->escapeHtml($_item->getName()) ?>">
+                                       class="product-item-link">
                                         <?= $block->escapeHtml($_item->getName()) ?>
                                     </a>
                                 </strong>
@@ -111,41 +114,12 @@ use Magento\Framework\App\Action\Action;
         </div>
     </div>
     <?php if($block->getBlockHtml('formkey')): ?>
-        <script type="text/x-magento-init">
-        {
-            ".block.widget [data-role=tocart-form]": {
-                "Magento_Catalog/js/validate-product": {}
-            },
-            ".product-item-link": {
-                "popOutEffect": {}
-            }
+    <script type="text/x-magento-init">
+    {
+        ".block.widget [data-role=tocart-form]": {
+            "Magento_Catalog/js/validate-product": {}
         }
-        </script>
-        <script>
-            define(['jquery'], function($) {
-                'use strict';
-
-                $.widget('custom.popOutEffect', {
-                    _create: function() {
-                        var self = this;
-
-                        this.element.hover(
-                            function() {
-                                // Hover in: Set the full name on hover
-                                $(this).text($(this).data('full-name'));
-                            },
-                            function() {
-                                // Hover out: Set the truncated name after hover
-                                var originalName = $(this).data('full-name');
-                                var truncatedName = originalName.length > 30 ? originalName.substring(0, 30) + '...' : originalName;
-                                $(this).text(truncatedName);
-                            }
-                        );
-                    }
-                });
-
-                return $.custom.popOutEffect;
-            });
-        </script>
-    <?php endif; ?>
+    }
+    </script>
+    <?php endif;?>
 <?php endif;?>
