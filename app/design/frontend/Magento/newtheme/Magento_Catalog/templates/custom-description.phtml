@@ -1,6 +1,6 @@
 <div class="about-products-container">
     <div class="drp-container">
-        <button class="dropdown-btn" type="button" data-target="#drp1">
+        <button class="dropdown-btn" type="button" data-target="#cdrp1">
             Discription<svg fill="#e00616" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#e00616">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -14,22 +14,20 @@
                 </g>
             </svg>
         </button>
-        <div class="drop-menu" id="drp1">
+        <div class="drop-menu" id="cdrp1">
             <?php
-            /**
-             * @var \Magento\Catalog\Api\ProductRepositoryInterface $productRepository
-             */
+            /** @var \Magento\Catalog\Api\ProductRepositoryInterface $productRepository */
             $productRepository = \Magento\Framework\App\ObjectManager::getInstance()->get(\Magento\Catalog\Api\ProductRepositoryInterface::class);
 
             try {
                 // Load product by ID
-                $productId = 6;
+                $productId = 6; // Replace with the actual product ID
                 $product = $productRepository->getById($productId);
 
                 // Display product description
                 echo $product->getDescription();
             } catch (\Magento\Framework\Exception\NoSuchEntityException $e) {
-                // Handle exception if product with ID 6 does not exist
+                // Handle exception if product with the specified ID does not exist
                 echo "Product not found.";
             }
             ?>
@@ -37,7 +35,7 @@
     </div>
 
     <div class="drp-container">
-        <button class="dropdown-btn" type="button" data-target="#drp2">
+        <button class="dropdown-btn" type="button" data-target="#cdrp2">
             Suggested Use<svg fill="#e00616" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#e00616">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -51,13 +49,13 @@
                 </g>
             </svg>
         </button>
-        <div class="drop-menu" id="drp2">
+        <div class="drop-menu" id="cdrp2">
             <h6>Content goes here</h6>
         </div>
     </div>
 
     <div class="drp-container">
-        <button class="dropdown-btn" type="button" data-target="#drp3">
+        <button class="dropdown-btn" type="button" data-target="#cdrp3">
             Ingredients<svg fill="#e00616" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#e00616">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -71,13 +69,13 @@
                 </g>
             </svg>
         </button>
-        <div class="drop-menu" id="drp3">
+        <div class="drop-menu" id="cdrp3">
             <h6>Content goes here</h6>
         </div>
     </div>
 
     <div class="drp-container">
-        <button class="dropdown-btn" type="button" data-target="#drp4">
+        <button class="dropdown-btn" type="button" data-target="#cdrp4">
             Product details<svg fill="#e00616" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#e00616">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -91,7 +89,7 @@
                 </g>
             </svg>
         </button>
-        <div class="drop-menu product-details-menu" id="drp4">
+        <div class="drop-menu product-details-menu" id="cdrp4">
             <?php
             /**
              * @var \Magento\Catalog\Block\Product\View\Description $block
@@ -105,7 +103,7 @@
     </div>
 
     <div class="drp-container">
-        <button class="dropdown-btn" type="button" data-target="#drp5">
+        <button class="dropdown-btn" type="button" data-target="#cdrp5">
             Reviews<svg fill="#e00616" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#e00616">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -119,7 +117,7 @@
                 </g>
             </svg>
         </button>
-        <div class="drop-menu" id="drp5">
+        <div class="drop-menu" id="cdrp5">
             <?php
             /**
              * @var \Magento\Review\Model\ReviewFactory $reviewFactory
