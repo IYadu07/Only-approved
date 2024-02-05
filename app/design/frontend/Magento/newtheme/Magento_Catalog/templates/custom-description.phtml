@@ -90,15 +90,7 @@
             </svg>
         </button>
         <div class="drop-menu product-details-menu" id="cdrp4">
-            <?php
-            /**
-             * @var \Magento\Catalog\Block\Product\View\Description $block
-             */
-            $block = $this->getLayout()->getBlock('product.info.overview');
-            if ($block) {
-                echo $block->toHtml();
-            }
-            ?>
+            <h6>Content goes here</h6>
         </div>
     </div>
 
@@ -118,39 +110,7 @@
             </svg>
         </button>
         <div class="drop-menu" id="cdrp5">
-            <?php
-            /**
-             * @var \Magento\Review\Model\ReviewFactory $reviewFactory
-             * @var \Magento\Review\Model\ResourceModel\Review\CollectionFactory $reviewCollectionFactory
-             * @var \Magento\Store\Model\StoreManagerInterface $storeManager
-             */
-            $reviewFactory = \Magento\Framework\App\ObjectManager::getInstance()->get(\Magento\Review\Model\ReviewFactory::class);
-            $reviewCollectionFactory = \Magento\Framework\App\ObjectManager::getInstance()->get(\Magento\Review\Model\ResourceModel\Review\CollectionFactory::class);
-            $storeManager = \Magento\Framework\App\ObjectManager::getInstance()->get(\Magento\Store\Model\StoreManagerInterface::class);
-
-            try {
-                // Product ID for which reviews are fetched
-                $productId = 6;
-
-                // Load product reviews
-                $productReviews = $reviewCollectionFactory->create()
-                    ->addStatusFilter(\Magento\Review\Model\Review::STATUS_APPROVED)
-                    ->addEntityFilter('product', $productId)
-                    ->setDateOrder();
-
-                // Display reviews
-                foreach ($productReviews as $review) {
-                    echo 'Review Title: ' . $review->getTitle() . '<br>';
-                    echo 'Review Details: ' . $review->getDetail() . '<br>';
-                    echo 'Rating: ' . $review->getRatingVotes() . '<br>';
-                    echo 'Customer: ' . $review->getNickname() . '<br>';
-                    echo '<hr>';
-                }
-            } catch (\Exception $e) {
-                // Handle exceptions if any
-                echo "Error: " . $e->getMessage();
-            }
-            ?>
+            <?php echo $block->getLayout()->createBlock(\Magento\Review\Block\Form::class)->setTemplate("Magento_Review::form.phtml")->toHtml(); ?>
         </div>
     </div>
 </div>
