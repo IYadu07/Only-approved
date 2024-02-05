@@ -16,7 +16,7 @@
                     </arguments>
                 </block>
                 <block class="Magento\Catalog\Block\Category\View" name="category.description" template="Magento_Catalog::category/description.phtml"/>
-                <!-- <block class="Magento\Catalog\Block\Category\View" name="category.cms" template="Magento_Catalog::category/cms.phtml"/> -->
+                <block class="Magento\Catalog\Block\Category\View" name="category.cms" template="Magento_Catalog::category/cms.phtml"/>
             </container>
         </referenceContainer>
         <referenceContainer name="content">
@@ -71,7 +71,7 @@
         <!-- Removed elements -->
 
         <referenceBlock name="catalog.leftnav" remove="true" />
-        <!-- <referenceBlock name="sidebar.additional" remove="true" />
-        <referenceBlock name="category.product.type.details.renderers" remove="true" /> -->
+        <referenceBlock name="sidebar.additional" remove="true" />
+        <!-- <referenceBlock name="category.product.type.details.renderers" remove="true" />  -->
     </body>
 </page>
