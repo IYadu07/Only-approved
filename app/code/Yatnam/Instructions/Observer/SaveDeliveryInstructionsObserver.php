@@ -1,42 +1,50 @@
 <?php
 namespace Yatnam\Instructions\Observer;
 
+use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
-use Magento\Sales\Model\Order;
-use Magento\Sales\Model\Order\Address;
-use Magento\Sales\Model\Order\AddressRepository;
+use Magento\Sales\Api\OrderRepositoryInterface;
+use Magento\Sales\Model\ResourceModel\Order as OrderResource;
+use Psr\Log\LoggerInterface;
 
 class SaveDeliveryInstructionsObserver implements ObserverInterface
 {
-    protected $addressRepository;
+    protected $orderRepository;
+    protected $orderResource;
+    protected $logger;
 
-    public function __construct(AddressRepository $addressRepository)
-    {
-        $this->addressRepository = $addressRepository;
+    public function __construct(
+        OrderRepositoryInterface $orderRepository,
+        OrderResource $orderResource,
+        LoggerInterface $logger
+    ) {
+        $this->orderRepository = $orderRepository;
+        $this->orderResource = $orderResource;
+        $this->logger = $logger;
     }
 
-    public function execute(\Magento\Framework\Event\Observer $observer)
+    public function execute(Observer $observer)
     {
-        /** @var Order $order */
-        $order = $observer->getOrder();
+        try {
+            $order = $observer->getOrder();
+            $deliveryInstructions = $order->getDeliveryInstructions();
 
-        /** @var Address $shippingAddress */
-        $shippingAddress = $order->getShippingAddress();
+            if ($deliveryInstructions !== null) {
+                // Save delivery instructions to sales_order table
+                $order->setData('delivery_instructions', $deliveryInstructions);
+                $this->orderRepository->save($order);
 
-        // Get delivery instructions from the shipping address
-        $deliveryInstructions = $shippingAddress->getDeliveryInstructions();
-
-        // Check if delivery instructions exist and update the sales_order_address table
-        if ($deliveryInstructions !== null) {
-            try {
-                $shippingAddressId = $shippingAddress->getId();
-                $address = $this->addressRepository->get($shippingAddressId);
-                $address->setDeliveryInstructions($deliveryInstructions);
-                $this->addressRepository->save($address);
-            } catch (\Exception $exception) {
-                // Log the exception for debugging purposes
-                $this->logger->error($exception->getMessage());
+                // Save delivery instructions to sales_order_grid table
+                $this->orderResource->getConnection()->update(
+                    $this->orderResource->getMainTable(),
+                    ['delivery_instructions' => $deliveryInstructions],
+                    ['entity_id = ?' => $order->getId()]
+                );
+            } else {
+                $this->logger->error('Delivery instructions are empty.');
             }
+        } catch (\Exception $e) {
+            $this->logger->error('An error occurred while saving delivery instructions: ' . $e->getMessage());
         }
     }
 }
