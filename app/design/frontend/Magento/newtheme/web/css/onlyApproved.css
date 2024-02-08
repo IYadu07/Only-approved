@@ -170,6 +170,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+.page-header .header.content .nav-container .user-container .user-item .container .minicart-wrapper .action.showcart .counter.qty .loader img {
+  width: 15px;
+}
 .page-header .header.content .nav-container .user-container .user-item .container .minicart-wrapper .action.showcart .counter.qty.empty {
   display: none;
 }
