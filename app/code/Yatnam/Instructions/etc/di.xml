@@ -1,0 +1,8 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Yatnam\Instructions\Observer\SaveDeliveryInstructionsObserverVirtual" type="Yatnam\Instructions\Observer\SaveDeliveryInstructionsObserver">
+        <arguments>
+            <argument name="observer" xsi:type="object">\Magento\Framework\Event\Observer</argument>
+        </arguments>
+    </virtualType>
+    <preference for="Yatnam\Instructions\Model\Order" type="Yatnam\Instructions\Model\Order" />
+</config>

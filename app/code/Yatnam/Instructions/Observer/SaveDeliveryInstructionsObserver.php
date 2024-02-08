@@ -1,50 +1,24 @@
 <?php
 namespace Yatnam\Instructions\Observer;
 
-use Magento\Framework\Event\Observer;
-use Magento\Framework\Event\ObserverInterface;
-use Magento\Sales\Api\OrderRepositoryInterface;
-use Magento\Sales\Model\ResourceModel\Order as OrderResource;
-use Psr\Log\LoggerInterface;
-
-class SaveDeliveryInstructionsObserver implements ObserverInterface
+class SaveDeliveryInstructionsObserver implements \Magento\Framework\Event\ObserverInterface
 {
-    protected $orderRepository;
-    protected $orderResource;
-    protected $logger;
+    protected $checkoutSession;
 
     public function __construct(
-        OrderRepositoryInterface $orderRepository,
-        OrderResource $orderResource,
-        LoggerInterface $logger
+        \Magento\Checkout\Model\Session $checkoutSession
     ) {
-        $this->orderRepository = $orderRepository;
-        $this->orderResource = $orderResource;
-        $this->logger = $logger;
+        $this->checkoutSession = $checkoutSession;
     }
 
-    public function execute(Observer $observer)
+    public function execute(\Magento\Framework\Event\Observer $observer)
     {
-        try {
-            $order = $observer->getOrder();
-            $deliveryInstructions = $order->getDeliveryInstructions();
-
-            if ($deliveryInstructions !== null) {
-                // Save delivery instructions to sales_order table
-                $order->setData('delivery_instructions', $deliveryInstructions);
-                $this->orderRepository->save($order);
-
-                // Save delivery instructions to sales_order_grid table
-                $this->orderResource->getConnection()->update(
-                    $this->orderResource->getMainTable(),
-                    ['delivery_instructions' => $deliveryInstructions],
-                    ['entity_id = ?' => $order->getId()]
-                );
-            } else {
-                $this->logger->error('Delivery instructions are empty.');
-            }
-        } catch (\Exception $e) {
-            $this->logger->error('An error occurred while saving delivery instructions: ' . $e->getMessage());
+        $order = $observer->getEvent()->getOrder();
+        $deliveryInstructions = $this->checkoutSession->getDeliveryInstructions();
+        
+        if ($deliveryInstructions !== null) {
+            $order->setData('delivery_instructions', $deliveryInstructions);
+            $order->save();
         }
     }
 }
