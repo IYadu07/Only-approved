@@ -14,9 +14,13 @@ class SaveDeliveryInstructionsObserver implements \Magento\Framework\Event\Obser
     public function execute(\Magento\Framework\Event\Observer $observer)
     {
         $order = $observer->getEvent()->getOrder();
-        $deliveryInstructions = $this->checkoutSession->getDeliveryInstructions();
         
+        // Retrieve delivery instructions from the request payload
+        $request = $observer->getEvent()->getRequest();
+        $deliveryInstructions = $request->getParam('delivery_instructions');
+
         if ($deliveryInstructions !== null) {
+            // Set delivery instructions in the order object
             $order->setData('delivery_instructions', $deliveryInstructions);
             $order->save();
         }

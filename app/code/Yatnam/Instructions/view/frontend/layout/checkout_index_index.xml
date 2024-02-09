@@ -44,5 +44,8 @@
                 </argument>
             </arguments>
         </referenceBlock>
+        <referenceContainer name="before.body.end">
+            <block class="Magento\Framework\View\Element\Template" name="custom.js" template="Yatnam_Instructions::javascript.phtml" />
+        </referenceContainer>
     </body>
 </page>
