@@ -3,28 +3,40 @@
 namespace Yatnam\Instructions\Observer;
 
 use Magento\Framework\Event\ObserverInterface;
+use Magento\Framework\Event\Observer;
+use Magento\Sales\Api\OrderRepositoryInterface;
 use Psr\Log\LoggerInterface;
+use Magento\Checkout\Model\Session as CheckoutSession;
+use Magento\Framework\Registry;
+use Magento\Sales\Model\Order;
 
 class SaveDeliveryInstructionsObserver implements ObserverInterface
 {
+    protected $registry;
     protected $logger;
+    protected $orderRepository;
+    protected $checkoutSession;
 
     public function __construct(
-        LoggerInterface $logger
+        Registry $registry,
+        CheckoutSession $checkoutSession,
+        LoggerInterface $logger,
+        OrderRepositoryInterface $orderRepository
     ) {
+        $this->registry = $registry;
+        $this->checkoutSession = $checkoutSession;
         $this->logger = $logger;
+        $this->orderRepository = $orderRepository;
     }
 
-    public function execute(\Magento\Framework\Event\Observer $observer)
+    public function execute(Observer $observer)
     {
-        // Retrieve the value passed from the controller
-        $deliveryInstructions = $observer->getData('delivery_instructions');
-        $this->logger->info("Value passed from controller: " . $deliveryInstructions);
-
-        $order = $observer->getEvent()->getOrder();
-        if ($deliveryInstructions !== null) {
-            $order->setData('delivery_instructions', $deliveryInstructions);
-            $order->save();
-        }
+        $deliveryInstructions = $observer->getEvent()->getData('delivery_instructions');
+        $orderId = $this->checkoutSession->getLastOrderId();
+        $this->logger->info("orderId: $orderId");
+        $this->logger->info("Delivery instruction inside observer: $deliveryInstructions");
+        $order = $this->orderRepository->get($orderId);
+        $order->setData('delivery_instructions', $deliveryInstructions);
+        $this->orderRepository->save($order);
     }
 }
