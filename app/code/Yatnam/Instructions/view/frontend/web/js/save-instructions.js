@@ -7,7 +7,7 @@ define(["jquery"], function ($) {
             var deliveryInstructions = $(".admin__control-textarea").val();
             $("#delivery_instructions_display").text(deliveryInstructions);
             $.ajax({
-                url: "/OnlyApproved/yatnam",
+                url: "/Yatnam/Instructions/Index/Index",
                 type: "POST",
                 dataType: "json",
                 data: {
