@@ -1,0 +1,61 @@
+<?php
+$productCollection = $block->getProductCollection();
+$imageHelper = $block->getImageHelper();
+
+?>
+<div class="popular-products-block" data-content-type="block" data-appearance="default" data-element="main">
+    <div class="widget block block-products-list grid">
+        <div class="block-content">
+            <div class="products-grid grid">
+                <ol class="product-items widget-product-grid">
+                    <?php foreach ($productCollection as $product) : ?>
+                        <?php
+                        $imageUrl = $imageHelper->init($product, 'product_page_image_small')->getUrl();
+                        ?>
+                        <li class="product-item">
+                            <div class="custom-product-item-info">
+                                <a href="<?php echo $product->getProductUrl(); ?>" class="product-item-photo">
+                                    <img class="product-image-photo" src="<?php echo $imageUrl; ?>" alt="<?php echo $product->getName(); ?>" />
+                                </a>
+                                <div class="custom-product-item-details">
+                                    <strong class="product-item-name">
+                                        <a href="<?php echo $product->getProductUrl(); ?>" class="product-item-link">
+                                            <?php echo $product->getName(); ?>
+                                        </a>
+                                    </strong>
+                                    <div class="price-box price-final_price">
+                                        <span class="price">
+                                            &#36; <?php echo $product->getFinalPrice();
+                                                    ?>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    <?php endforeach; ?>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    popular-products-row {
+        min-height: 0;
+    }
+
+    .product-image-photo {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .price {
+        color: #e10413;
+    }
+
+    .product-item-name {
+        margin-bottom: 20px;
+    }
+</style>
