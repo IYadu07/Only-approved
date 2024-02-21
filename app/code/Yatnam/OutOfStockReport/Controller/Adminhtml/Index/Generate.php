@@ -8,6 +8,7 @@ use Magento\Catalog\Api\ProductRepositoryInterface;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory as ProductCollectionFactory;
 use Magento\CatalogInventory\Api\StockRegistryInterface;
 use Magento\Framework\App\Response\Http\FileFactory;
+use Magento\Catalog\Model\Product\Attribute\Source\Status;
 
 class Generate extends Action
 {
@@ -16,6 +17,7 @@ class Generate extends Action
     protected $stockRegistry;
     protected $csvProcessor;
     protected $fileFactory;
+    protected $productStatus;
 
     public function __construct(
         Context $context,
@@ -23,7 +25,8 @@ class Generate extends Action
         ProductCollectionFactory $productCollectionFactory,
         StockRegistryInterface $stockRegistry,
         \Magento\Framework\File\Csv $csvProcessor,
-        FileFactory $fileFactory
+        FileFactory $fileFactory,
+        Status $productStatus
     ) {
         parent::__construct($context);
         $this->productRepository = $productRepository;
@@ -31,6 +34,7 @@ class Generate extends Action
         $this->stockRegistry = $stockRegistry;
         $this->csvProcessor = $csvProcessor;
         $this->fileFactory = $fileFactory;
+        $this->productStatus = $productStatus;
     }
 
     public function execute()
@@ -38,6 +42,7 @@ class Generate extends Action
         // Get all products
         $productCollection = $this->productCollectionFactory->create();
         $productCollection->addAttributeToSelect(['entity_id', 'name']);
+        $productCollection->addAttributeToFilter('status', \Magento\Catalog\Model\Product\Attribute\Source\Status::STATUS_ENABLED);
 
         // CSV data array
         $csvData = [];
