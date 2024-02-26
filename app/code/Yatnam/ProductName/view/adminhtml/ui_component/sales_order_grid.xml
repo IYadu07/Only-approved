@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <columns name="sales_order_columns">
+        <!-- Existing columns -->
+        <column name="product_name" class="Yatnam\ProductName\Ui\Component\Listing\Column\ProductName">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Product Name</label>
+                <sortable>false</sortable>
+            </settings>
+        </column>
+    </columns>
+</listing>
