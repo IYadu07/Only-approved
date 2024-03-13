@@ -1,0 +1,11 @@
+<?php
+$_item = $block->getItem();
+/** @var $block \Magento\Checkout\Block\Cart\Item\Renderer\Actions\Remove */
+
+$cartItemId = $_item->getItemId(); // Retrieve the ID of the cart item
+?>
+<a href="#" title="<?= $block->escapeHtml(__('Remove item')) ?>" class="action action-delete" data-cart-item-id="<?= $cartItemId ?>">
+    <span>
+        <?= $block->escapeHtml(__('Remove item')) ?>
+    </span>
+</a>

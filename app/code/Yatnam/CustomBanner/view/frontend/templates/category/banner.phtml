@@ -1,0 +1,9 @@
+<?php
+// app/code/YourNamespace/YourModule/view/frontend/templates/category/banner.phtml
+
+$category = $block->getCurrentCategory();
+$bannerUrl = $category->getBanner();
+if ($bannerUrl) {
+    echo '<img src="' . $block->escapeUrl($bannerUrl) . '" alt="' . $block->escapeHtml($category->getName()) . ' Banner">';
+}
+echo "<img src='/pub/media/catalog/category/banner.png'>";

@@ -228,7 +228,7 @@
         <!-- Removed elements -->
 
         <referenceBlock name="product.info.sku" remove="true" />
-        <referenceBlock name="product.info.extrahint" remove="true" />
+        <!-- <referenceBlock name="product.info.extrahint" remove="true" /> -->
         <referenceBlock name="product.info.description" remove="true" />
 
     </body>
