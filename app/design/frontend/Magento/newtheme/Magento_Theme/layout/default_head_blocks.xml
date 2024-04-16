@@ -16,7 +16,7 @@
         <css src="css/onlyApproved.css" media="all and (min-width: 0)"/>
 
         <!-- owlcarousel -->
-        
+
         <css src="css/owl.carousel.css" media="all and (min-width: 0)"/>
         <css src="css/owl.theme.default.css" media="all and (min-width: 0)"/>
     </head>

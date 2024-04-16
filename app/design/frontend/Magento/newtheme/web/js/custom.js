@@ -78,35 +78,35 @@ define(["jquery", "owl-carousel"], function ($, owlCarousel) {
 
         function setMaxHeight(elements, selector, referenceElement) {
             var maxHeight = 0;
-        
+
             // Reset height to 'auto' before recalculating
             elements.find(selector).height('auto');
-        
+
             // Loop through each element and find the maximum height
             elements.each(function () {
-              if ($(this).is(referenceElement)) return; // Skip the reference element
-              var elementHeight = $(this).find(selector).height();
-              maxHeight = Math.max(maxHeight, elementHeight);
+                if ($(this).is(referenceElement)) return; // Skip the reference element
+                var elementHeight = $(this).find(selector).height();
+                maxHeight = Math.max(maxHeight, elementHeight);
             });
-        
+
             // Set the maximum height to all elements
             elements.find(selector).height(maxHeight);
-          }
-        
-          // Function to update heights on window resize
-          function updateHeights() {
+        }
+
+        // Function to update heights on window resize
+        function updateHeights() {
             // Update heights for each group
-            
+
             setMaxHeight($('.products-grid .product-item'), '.product-item-name', $('.products-grid .product-item').first());
-          }
-        
-          // Initial height setup
-          updateHeights();
-        
-          // Update heights on window resize
-          $(window).resize(function () {
+        }
+
+        // Initial height setup
+        updateHeights();
+
+        // Update heights on window resize
+        $(window).resize(function () {
             updateHeights();
-          });
+        });
 
         // Footer navbar
 

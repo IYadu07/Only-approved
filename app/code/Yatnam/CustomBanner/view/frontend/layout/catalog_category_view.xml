@@ -58,7 +58,7 @@
             </arguments>
         </referenceBlock>
         <referenceContainer name="columns.top">
-            <block class="Magento\Catalog\Block\Category\View" name="category.banner" template="Yatnam_CustomBanner::category/banner.phtml" before="-">
+            <block class="Yatnam\CustomBanner\Block\Banner" name="category.banner" template="Yatnam_CustomBanner::category/Custombanner.phtml" before="-">
                 <arguments>
                     <argument name="image" xsi:type="object">Yatnam\CustomBanner\ViewModel\Category\Image</argument>
                     <argument name="output" xsi:type="object">Yatnam\CustomBanner\ViewModel\Category\Output</argument>

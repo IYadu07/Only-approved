@@ -1,0 +1,42 @@
+<?php
+// Retrieve subcategories details
+$subcategoriesDetails = $block->getSubcategoriesDetails();
+?>
+<div class="block widget block-products-list grid">
+    <div class="block-content">
+        <!-- new_products_content_widget_grid-->
+        <div class="products-grid grid">
+            <div class="subcategory-images product-items widget-product-grid">
+                <?php foreach ($subcategoriesDetails as $subcategory) : ?>
+                    <?php
+                    // Check if the subcategory URL ends with "brands.html" exactly
+                    $url = $subcategory['url'];
+
+                    ?>
+                    <div class="subcategory-image product-item">
+                        <div class="product-item-info">
+
+                            <a href="<?php echo $url; ?>" class="product-item-photo">
+                                <img src="<?php echo $subcategory['image_url']; ?>" alt="<?php echo $subcategory['name']; ?>" />
+                            </a>
+
+                        </div>
+                    </div>
+
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    @media screen and (min-width: 1024px) {
+        .block.widget .products-grid .product-item {
+            margin-left: calc((100% - 4 * 24.439%) / 3) !important;
+        }
+    }
+
+    .block.widget .products-grid .product-item:nth-child(5n + 1) {
+        margin-left: 0 !important;
+    }
+</style>
