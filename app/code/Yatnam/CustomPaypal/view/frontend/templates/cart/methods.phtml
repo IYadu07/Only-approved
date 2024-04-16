@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+/** @var $block \Magento\Checkout\Block\Cart */
+?>
+<?php if (!$block->hasError()) : ?>
+    <?php $methods = $block->getMethods('methods') ?: $block->getMethods('top_methods'); ?>
+    <ul class="checkout methods items checkout-methods-items">
+        <?php foreach ($methods as $method) : ?>
+            <?php $methodHtml = $block->getMethodHtml($method); ?>
+            <?php if (trim($methodHtml) !== '') : ?>
+                <li class="item">
+                    <?php if ($method === 'checkout.cart.shortcut.buttons') : ?>
+                        <div class="paypal-overlay">
+                        </div>
+                        <?= /* @noEscape */ $methodHtml ?>
+                    <?php else : ?>
+                        <?= /* @noEscape */ $methodHtml ?>
+                    <?php endif; ?>
+                </li>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
+
+<style>
+    .checkout.methods.items.checkout-methods-items .item {
+        position: relative;
+    }
+
+    .paypal-overlay {
+        display: flex;
+        background-color: red;
+        position: absolute;
+        height: 35px;
+        min-width: 200px;
+        top: 0%;
+        left: 0%;
+        right: 0%;
+        z-index: 101;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 768px) {
+        .paypal-overlay {
+            height: 55px;
+        }
+    }
+</style>

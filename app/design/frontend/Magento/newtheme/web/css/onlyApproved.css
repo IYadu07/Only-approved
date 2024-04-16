@@ -66,6 +66,174 @@ body {
   display: flex;
   align-items: center;
 }
+.page-header .header.content .nav-container .switcher {
+  margin: 0px 10px;
+}
+.page-header .header.content .nav-container .switcher .label {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.page-header .header.content .nav-container .switcher .options {
+  display: inline-block;
+  position: relative;
+}
+.page-header .header.content .nav-container .switcher .options:before,
+.page-header .header.content .nav-container .switcher .options:after {
+  content: '';
+  display: table;
+}
+.page-header .header.content .nav-container .switcher .options:after {
+  clear: both;
+}
+.page-header .header.content .nav-container .switcher .options .action.toggle {
+  padding: 0;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+.page-header .header.content .nav-container .switcher .options .action.toggle > span {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.page-header .header.content .nav-container .switcher .options .action.toggle:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 22px;
+  line-height: 22px;
+  color: inherit;
+  content: '\e622';
+  font-family: 'icons-blank-theme';
+  margin: 0;
+  vertical-align: top;
+  display: inline-block;
+  font-weight: normal;
+  overflow: hidden;
+  speak: none;
+  text-align: center;
+}
+.page-header .header.content .nav-container .switcher .options .action.toggle:hover:after {
+  color: inherit;
+}
+.page-header .header.content .nav-container .switcher .options .action.toggle:active:after {
+  color: inherit;
+}
+.page-header .header.content .nav-container .switcher .options .action.toggle.active {
+  display: inline-block;
+  text-decoration: none;
+}
+.page-header .header.content .nav-container .switcher .options .action.toggle.active > span {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.page-header .header.content .nav-container .switcher .options .action.toggle.active:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 22px;
+  line-height: 22px;
+  color: inherit;
+  content: '\e621';
+  font-family: 'icons-blank-theme';
+  margin: 0;
+  vertical-align: top;
+  display: inline-block;
+  font-weight: normal;
+  overflow: hidden;
+  speak: none;
+  text-align: center;
+}
+.page-header .header.content .nav-container .switcher .options .action.toggle.active:hover:after {
+  color: inherit;
+}
+.page-header .header.content .nav-container .switcher .options .action.toggle.active:active:after {
+  color: inherit;
+}
+.page-header .header.content .nav-container .switcher .options ul.dropdown {
+  margin: 0;
+  padding: 0;
+  list-style: none none;
+  background: #ffffff;
+  border: 1px solid #bbbbbb;
+  margin-top: 4px;
+  z-index: 100;
+  box-sizing: border-box;
+  display: none;
+  position: absolute;
+  top: 100%;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+}
+.page-header .header.content .nav-container .switcher .options ul.dropdown li {
+  margin: 0;
+  padding: 0;
+}
+.page-header .header.content .nav-container .switcher .options ul.dropdown li:hover {
+  background: #e8e8e8;
+  cursor: pointer;
+}
+.page-header .header.content .nav-container .switcher .options ul.dropdown:before,
+.page-header .header.content .nav-container .switcher .options ul.dropdown:after {
+  border-bottom-style: solid;
+  content: '';
+  display: block;
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+.page-header .header.content .nav-container .switcher .options ul.dropdown:before {
+  border: 6px solid;
+  border-color: transparent transparent #ffffff transparent;
+  z-index: 99;
+}
+.page-header .header.content .nav-container .switcher .options ul.dropdown:after {
+  border: 7px solid;
+  border-color: transparent transparent #bbbbbb transparent;
+  z-index: 98;
+}
+.page-header .header.content .nav-container .switcher .options ul.dropdown:before {
+  left: 10px;
+  top: -12px;
+}
+.page-header .header.content .nav-container .switcher .options ul.dropdown:after {
+  left: 9px;
+  top: -14px;
+}
+.page-header .header.content .nav-container .switcher .options.active {
+  overflow: visible;
+}
+.page-header .header.content .nav-container .switcher .options.active ul.dropdown {
+  display: block;
+}
+.page-header .header.content .nav-container .switcher .options ul.dropdown a {
+  display: block;
+  padding: 8px;
+}
+.page-header .header.content .nav-container .switcher .options ul.dropdown a:hover {
+  text-decoration: none;
+}
+.page-header .header.content .nav-container .switcher li {
+  font-size: 12px;
+  margin: 0;
+}
+.page-header .header.content .nav-container .switcher strong {
+  font-weight: 400;
+}
 .page-header .header.content .nav-container .flag-and-select-container {
   display: flex;
   justify-content: center;
@@ -1088,6 +1256,7 @@ body {
   padding: 14px 27px;
   background-color: #e30514;
   border: none;
+  margin-bottom: 15px;
 }
 .catalog-product-view .page-main {
   max-width: 1375px;
@@ -1205,6 +1374,9 @@ body {
 .catalog-product-view .page-main [data-content-type="row"][data-appearance="contained"] .popular-products-row .products-grid .product-items.widget-product-grid .product-item .product-item-info {
   height: fit-content;
   position: relative;
+}
+.catalog-product-view .page-main [data-content-type="row"][data-appearance="contained"] .popular-products-row .products-grid .product-items.widget-product-grid .product-item .product-item-info .product-image-photo {
+  width: 100% !important;
 }
 .catalog-product-view .page-main [data-content-type="row"][data-appearance="contained"] .popular-products-row .products-grid .product-items.widget-product-grid .product-item .product-item-info .product-item-details {
   display: flex;
@@ -1635,4 +1807,40 @@ body {
   .page-footer .footer-nav-container .width-container .footer-bottom > .text {
     font-size: 1rem;
   }
+}
+#compareModal {
+  display: flex;
+  /* Hide modal by default */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black background with opacity */
+}
+.your-modal {
+  display: none;
+  /* Hide modal by default */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black background with opacity */
+}
+.your-modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  /* Center modal vertically and horizontally */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  /* Max width of modal */
 }

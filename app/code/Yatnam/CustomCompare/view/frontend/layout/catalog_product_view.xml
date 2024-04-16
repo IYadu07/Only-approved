@@ -201,7 +201,9 @@
         <referenceContainer name="content">
             <block class="Magento\Catalog\Block\Ui\ProductViewCounter" name="product_viewed_counter" template="Magento_Catalog::product/view/counter.phtml"/>
         </referenceContainer>
-
-        <!-- <block name="custom-compare-modal" template="Yatnam_CustomCompare::product/list/items.phtml"> -->
+        <!-- Custom -->
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="compare.modal" template="Yatnam_CustomCompare::add_to_compare_modal.phtml"/>
+        </referenceContainer>
     </body>
 </page>

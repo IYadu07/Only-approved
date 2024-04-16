@@ -1,6 +1,9 @@
 <?php
 $productCollection = $block->getProductCollection();
 $imageHelper = $block->getImageHelper();
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$priceCurrency = $objectManager->create('Magento\Framework\Pricing\PriceCurrencyInterface');
+$currencySymbol = $priceCurrency->getCurrencySymbol();
 
 ?>
 <div class="popular-products-block" data-content-type="block" data-appearance="default" data-element="main">
@@ -25,8 +28,7 @@ $imageHelper = $block->getImageHelper();
                                     </strong>
                                     <div class="price-box price-final_price">
                                         <span class="price">
-                                            &#36; <?php echo $product->getFinalPrice();
-                                                    ?>
+                                            <?php echo $currencySymbol; ?><?php echo $product->getFinalPrice(); ?>
                                         </span>
                                     </div>
                                 </div>
@@ -38,6 +40,7 @@ $imageHelper = $block->getImageHelper();
         </div>
     </div>
 </div>
+
 
 <style>
     popular-products-row {

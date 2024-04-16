@@ -1,0 +1,60 @@
+<div id="my-modal" class="modal">
+    <div class="modal-content">
+        <div class="close">&times;</div>
+        <div class="main-content">
+
+        </div>
+    </div>
+</div>
+
+<style>
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        right: 0;
+        bottom: 0;
+        overflow: auto;
+        max-width: 350px;
+        max-height: 350px;
+        margin: 15px;
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        padding: 20px;
+        border: 1px solid #888;
+        border-radius: 5px;
+        max-width: 80%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .close {
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    .close:hover {
+        color: #000;
+    }
+
+    .product-item {
+        display: flex;
+    }
+
+    .product-item img {
+        width: 30%;
+    }
+
+    .product-item .product-info h3 {
+        font-size: 1.4rem;
+    }
+
+    .product-item .product-info p {
+        font-size: 1.2rem;
+    }
+</style>

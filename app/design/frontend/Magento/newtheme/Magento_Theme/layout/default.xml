@@ -8,6 +8,10 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
 
+        <!-- Moved elements -->
+
+        <move element="store_language" destination="nav-container" after="blue-logo-container"/>
+
         <!-- Removed elements -->
 
         <referenceBlock name="header.panel.wrapper" remove="true" />
@@ -34,7 +38,6 @@
                 <container name="blue-logo-container" htmlTag="div" htmlClass="blue-logo-container" after="top.search">
                     <block class="Magento\Framework\View\Element\Template" name="blue-logo" template="Magento_Theme::blue-logo.phtml"/>
                 </container>
-                <block class="Magento\Framework\View\Element\Template" name="country-selector" template="Magento_Theme::country_selector.phtml"/>
                 <container name="user-container" htmlTag="div" htmlClass="user-container" after="country-selector">
                     <container name="item-my-account-container" htmlTag="div" htmlClass="user-item">
                         <block class="Magento\Framework\View\Element\Template" name="item-my-account" template="Magento_Theme::my-account.phtml"/>
@@ -75,6 +78,7 @@
         </referenceContainer>
 
         <move element="form.subscribe" destination="width-container-wrapper"/>
+
     </body>
 
 

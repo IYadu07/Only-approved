@@ -6,7 +6,6 @@ define([
     'Magento_Checkout/js/action/get-totals'
 ], function ($, customerData, mainQuote, rateReg, getTotalsAction) {
     'use strict';
-    console.log("js loaded");
     // Function to bind event listener
     function bindEventListeners() {
         $('.input-text.qty').on('change', function () {

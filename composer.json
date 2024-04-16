@@ -22,7 +22,9 @@
         "adyen/module-payment": "^9.2",
         "magento/composer-dependency-version-audit-plugin": "~0.1",
         "magento/composer-root-update-plugin": "~2.0",
-        "magento/product-community-edition": "2.4.6"
+        "magento/product-community-edition": "2.4.6",
+        "swissup/breeze-evolution": "^2.1",
+        "swissup/module-marketplace": "^1.10"
     },
     "autoload": {
         "exclude-from-classmap": [
